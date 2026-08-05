@@ -1,0 +1,22 @@
+uuid: 53f354b1-d890-477a-bde4-9dab4e13e46b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.block
+  module:
+    - text
+id: paragraph.block.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: block
+label: Blurb
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

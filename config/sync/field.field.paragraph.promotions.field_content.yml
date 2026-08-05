@@ -1,0 +1,22 @@
+uuid: 92badc21-8eab-4e0e-8dd4-06886be17fa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.promotions
+  module:
+    - text
+id: paragraph.promotions.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: promotions
+label: Blurb
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

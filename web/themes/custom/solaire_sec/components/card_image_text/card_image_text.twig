@@ -1,0 +1,18 @@
+<div class="image-text-container image-position-{{ position }}">
+  {% if position in ['top', 'left'] %}
+    <div class="image-text-child image-text-section__image image-{{ position }}">
+      {{ image }}
+    </div>
+  {% endif %}
+
+  <div class="image-text-child image-text-section__content">
+    <h2>{{ heading }}</h2>
+    {{ body }}
+  </div>
+
+  {% if position in ['right', 'bottom'] %}
+    <div class="image-text-child image-text-section__image image-{{ position }}">
+      {{ image }}
+    </div>
+  {% endif %}
+</div>

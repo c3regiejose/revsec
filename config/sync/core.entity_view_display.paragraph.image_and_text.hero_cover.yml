@@ -1,0 +1,80 @@
+uuid: 8717a8d3-06ab-4474-9db0-733cb2dd4c77
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.image_and_text.field_content
+    - field.field.paragraph.image_and_text.field_image
+    - field.field.paragraph.image_and_text.field_image_position
+    - field.field.paragraph.image_and_text.field_image_style
+    - field.field.paragraph.image_and_text.field_title
+    - image.style.hero
+    - paragraphs.paragraphs_type.image_and_text
+  module:
+    - ds
+    - image
+    - text
+id: paragraph.image_and_text.hero_cover
+targetEntityType: paragraph
+bundle: image_and_text
+mode: hero_cover
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: hero
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_image_position: true
+  field_image_style: true

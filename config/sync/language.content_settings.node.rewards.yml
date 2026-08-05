@@ -1,0 +1,11 @@
+uuid: 1edea408-247d-40fd-96fe-3ff73099890f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.rewards
+id: node.rewards
+target_entity_type_id: node
+target_bundle: rewards
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,30 @@
+uuid: f9cb5c2d-4a47-4cd7-862a-08cafce9fc1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_image_style
+    - paragraphs
+id: paragraph.field_image_style
+field_name: field_image_style
+entity_type: paragraph
+type: image_style
+settings:
+  allowed_values:
+    -
+      value: 700x400
+      label: 700x400
+    -
+      value: 700x500
+      label: 700x500
+    -
+      value: 700x525
+      label: 700x525
+  sort: 0
+module: field_image_style
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

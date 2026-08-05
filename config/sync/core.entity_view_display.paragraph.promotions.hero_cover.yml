@@ -1,0 +1,43 @@
+uuid: 750e5de5-0442-4c5c-a531-e7186687eb92
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.promotions.field_content
+    - field.field.paragraph.promotions.field_display_layout
+    - field.field.paragraph.promotions.field_is_slider
+    - field.field.paragraph.promotions.field_referenced_content_items
+    - field.field.paragraph.promotions.field_slide_per_view
+    - field.field.paragraph.promotions.field_text_alignment
+    - field.field.paragraph.promotions.field_title
+    - paragraphs.paragraphs_type.promotions
+  module:
+    - text
+id: paragraph.promotions.hero_cover
+targetEntityType: paragraph
+bundle: promotions
+mode: hero_cover
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_display_layout: true
+  field_is_slider: true
+  field_referenced_content_items: true
+  field_slide_per_view: true
+  field_text_alignment: true

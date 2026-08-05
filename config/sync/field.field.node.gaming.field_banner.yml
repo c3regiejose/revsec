@@ -1,0 +1,52 @@
+uuid: d9bed976-845f-4d36-8c47-73796e18f434
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner
+    - node.type.gaming
+    - paragraphs.paragraphs_type.main_banner
+  module:
+    - entity_reference_revisions
+id: node.gaming.field_banner
+field_name: field_banner
+entity_type: node
+bundle: gaming
+label: Banner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      main_banner: main_banner
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 9
+        enabled: false
+      banner:
+        weight: 4
+        enabled: false
+      block:
+        weight: 11
+        enabled: false
+      experience_signature:
+        weight: 12
+        enabled: false
+      information_block:
+        weight: 5
+        enabled: false
+      main_banner:
+        weight: 6
+        enabled: true
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 15
+        enabled: false
+field_type: entity_reference_revisions

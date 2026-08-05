@@ -1,0 +1,10 @@
+uuid: cf752385-67eb-4082-a92a-acc30361f50b
+langcode: en
+status: true
+dependencies: {  }
+id: main_banner
+label: 'Main Banner'
+icon_uuid: null
+icon_default: null
+description: 'A flexible banner component that supports multiple layouts and content combinations for use throughout the site.'
+behavior_plugins: {  }

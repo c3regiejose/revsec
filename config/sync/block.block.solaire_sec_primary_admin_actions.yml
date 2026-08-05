@@ -1,0 +1,20 @@
+uuid: 4f5ba8ae-8728-44b0-b3fb-6303cac584ec
+langcode: en
+status: true
+dependencies:
+  theme:
+    - solaire_sec
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: solaire_sec_primary_admin_actions
+theme: solaire_sec
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,35 @@
+uuid: 225c0c37-c31a-4b53-bba6-6b58dccd1b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.block.field_content
+    - field.field.paragraph.block.field_related_block
+    - field.field.paragraph.block.field_title
+    - paragraphs.paragraphs_type.block
+  module:
+    - text
+id: paragraph.block.hero_cover
+targetEntityType: paragraph
+bundle: block
+mode: hero_cover
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_related_block: true

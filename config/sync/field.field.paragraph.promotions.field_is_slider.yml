@@ -1,0 +1,21 @@
+uuid: 803421f5-d81f-4acb-bdff-b8cd810b97d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_slider
+    - paragraphs.paragraphs_type.promotions
+id: paragraph.promotions.field_is_slider
+field_name: field_is_slider
+entity_type: paragraph
+bundle: promotions
+label: 'is Slider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

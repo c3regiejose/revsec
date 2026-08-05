@@ -1,0 +1,11 @@
+uuid: c74e23a0-9d42-4a51-8b55-1e6da8a6b4b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.card_w_category
+label: 'Card w Category'
+description: null
+targetEntityType: paragraph
+cache: true

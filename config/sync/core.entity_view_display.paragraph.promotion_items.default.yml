@@ -1,0 +1,22 @@
+uuid: abbd2e15-392d-45a4-9897-b87973257ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promotion_items.field_referenced_content
+    - paragraphs.paragraphs_type.promotion_items
+id: paragraph.promotion_items.default
+targetEntityType: paragraph
+bundle: promotion_items
+mode: default
+content:
+  field_referenced_content:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

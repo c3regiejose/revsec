@@ -1,0 +1,17 @@
+uuid: fac5bff1-4c3c-4322-975e-2eb4632241b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landing Page'
+type: landing_page
+description: 'Content type for building standalone landing pages using reusable components and configurable layouts.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

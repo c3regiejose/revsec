@@ -1,0 +1,11 @@
+uuid: 7b5f4dac-8cdd-4473-9ab2-9535ccecbfa2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.hero_slider
+label: 'Hero Slider'
+description: null
+targetEntityType: paragraph
+cache: true

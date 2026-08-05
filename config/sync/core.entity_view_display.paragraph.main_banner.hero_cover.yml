@@ -1,0 +1,37 @@
+uuid: 1b990e79-b892-42ff-8bdb-6ebcae63eb9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.main_banner.field_banner_items
+    - field.field.paragraph.main_banner.field_display_layout
+    - paragraphs.paragraphs_type.main_banner
+  module:
+    - entity_reference_revisions
+    - field_formatter_range
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.main_banner.hero_cover
+targetEntityType: paragraph
+bundle: main_banner
+mode: hero_cover
+content:
+  field_banner_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: hero_cover
+      link: ''
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 1
+        offset: 0
+    weight: 0
+    region: content
+hidden:
+  field_display_layout: true

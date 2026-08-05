@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  transition: background-color 250ms var(--ease);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+hr,
+.separator {
+  background: #d2d3d9;
+  margin-block: 3rem;
+  height: 1px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  isolation: isolate;
+  background-color: var(--background);
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--foreground);
+  font-family: var(--text-sans);
+  font-weight: 300;
+  background-image: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}

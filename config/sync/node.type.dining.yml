@@ -1,0 +1,17 @@
+uuid: 144f1759-3523-49d2-9e5e-825b25a2e93e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Dining
+type: dining
+description: 'Use <em>Dining</em> for creating pages for <strong>Restaurants, Bars or Cafes</strong> like:  <em>Finestra</em>,<em>Deluxe Room</em>,<em>Yakumi</em>, etc.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,10 @@
+uuid: 601fcdae-23e4-4bff-be13-a2b23ef00dff
+langcode: en
+status: true
+dependencies: {  }
+id: experience_signature
+label: 'Experience Signature'
+icon_uuid: null
+icon_default: null
+description: 'Experience Signature'
+behavior_plugins: {  }

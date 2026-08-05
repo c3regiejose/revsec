@@ -1,0 +1,23 @@
+uuid: 981b4143-b6a3-4c34-93a9-7c25b969be44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_alignment
+    - paragraphs.paragraphs_type.promotions
+  module:
+    - options
+id: paragraph.promotions.field_text_alignment
+field_name: field_text_alignment
+entity_type: paragraph
+bundle: promotions
+label: 'Text Alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

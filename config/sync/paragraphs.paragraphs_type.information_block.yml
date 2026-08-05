@@ -1,0 +1,10 @@
+uuid: 51460c55-5d36-4896-af14-916c9cbf2d93
+langcode: en
+status: true
+dependencies: {  }
+id: information_block
+label: 'Information Block'
+icon_uuid: null
+icon_default: null
+description: 'Provides a general-purpose content section consisting of a title and body. Use this paragraph type to add reusable text content throughout the site, such as introductions, descriptions, informational sections, or other rich text content.'
+behavior_plugins: {  }

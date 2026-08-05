@@ -1,0 +1,33 @@
+uuid: f4ea7496-cc05-4e07-acf4-5ed6ffe70a10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.main_banner.field_banner_items
+    - field.field.paragraph.main_banner.field_display_layout
+    - paragraphs.paragraphs_type.main_banner
+  module:
+    - entity_reference_revisions
+    - view_mode_selector
+id: paragraph.main_banner.default
+targetEntityType: paragraph
+bundle: main_banner
+mode: default
+content:
+  field_banner_items:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_display_layout:
+    type: view_mode_selector
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

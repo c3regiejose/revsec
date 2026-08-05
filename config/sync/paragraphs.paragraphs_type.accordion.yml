@@ -1,0 +1,10 @@
+uuid: 4614d5fa-89c5-45e1-b1ae-f397705af997
+langcode: en
+status: true
+dependencies: {  }
+id: accordion
+label: Accordion
+icon_uuid: null
+icon_default: null
+description: 'Creates an interactive accordion layout for presenting FAQs, grouped information, or detailed content sections with expandable and collapsible panels.'
+behavior_plugins: {  }

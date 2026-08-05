@@ -1,0 +1,10 @@
+uuid: 9740182d-5244-499f-b31b-25a48ab8d63d
+langcode: en
+status: true
+dependencies: {  }
+id: image_and_text
+label: 'Image and Text'
+icon_uuid: null
+icon_default: null
+description: 'A reusable content section that pairs an image with descriptive text to effectively present featured content. The image can be aligned to either the left or right, allowing for visually dynamic page layouts while maintaining a consistent design.'
+behavior_plugins: {  }

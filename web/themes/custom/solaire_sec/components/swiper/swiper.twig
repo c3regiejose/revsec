@@ -1,0 +1,25 @@
+{% set slides = slidesPerView ?? 3 %}
+
+<!-- Slider main container -->
+<div class="swiper main-swiper" data-slidePerView="{{ slides }}">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    {{ cardItem }}
+  </div>
+
+  {% block pagination %}
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  {% endblock %}
+
+  {% block navigation %}
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  {% endblock %}
+
+  {% block scrollbar %}
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  {% endblock %}
+</div>

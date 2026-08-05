@@ -1,0 +1,41 @@
+uuid: 9a9bb684-d93d-4d41-91c9-1c4429d1ab91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block.field_content
+    - field.field.paragraph.block.field_related_block
+    - field.field.paragraph.block.field_title
+    - paragraphs.paragraphs_type.block
+  module:
+    - text
+id: paragraph.block.default
+targetEntityType: paragraph
+bundle: block
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_related_block:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: b0ecc646-435a-4368-9e86-38591877fe37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_summary
+    - node.type.rooms
+  module:
+    - text
+id: node.rooms.field_teaser_summary
+field_name: field_teaser_summary
+entity_type: node
+bundle: rooms
+label: 'Teaser Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

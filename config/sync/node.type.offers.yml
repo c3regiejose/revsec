@@ -1,0 +1,17 @@
+uuid: d6f62150-cfa7-4327-b943-57b8d66a758b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Offers
+type: offers
+description: "Use <em>Offers</em> for creating pages for <strong>Solaire North's promotional events</strong>"
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,97 @@
+uuid: ee3f82ac-d709-47eb-a05d-f6b9834fa51d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promotions.field_content
+    - field.field.paragraph.promotions.field_display_layout
+    - field.field.paragraph.promotions.field_is_slider
+    - field.field.paragraph.promotions.field_referenced_content_items
+    - field.field.paragraph.promotions.field_slide_per_view
+    - field.field.paragraph.promotions.field_text_alignment
+    - field.field.paragraph.promotions.field_title
+    - paragraphs.paragraphs_type.promotions
+  module:
+    - ds
+    - entity_reference_revisions
+    - options
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_title
+        - field_display_layout
+        - field_content
+        - field_referenced_content_items
+id: paragraph.promotions.default
+targetEntityType: paragraph
+bundle: promotions
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_is_slider:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_referenced_content_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: view_mode_selector
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_slide_per_view:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_text_alignment:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display_layout: true

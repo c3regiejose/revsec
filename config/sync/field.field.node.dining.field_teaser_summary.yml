@@ -1,0 +1,22 @@
+uuid: bdac4fc7-ca25-47c8-ad6b-205fe5524305
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_summary
+    - node.type.dining
+  module:
+    - text
+id: node.dining.field_teaser_summary
+field_name: field_teaser_summary
+entity_type: node
+bundle: dining
+label: 'Teaser Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

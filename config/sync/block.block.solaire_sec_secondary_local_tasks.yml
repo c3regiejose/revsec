@@ -1,0 +1,22 @@
+uuid: cec26977-cd6a-4824-9e0f-62a8798e08e1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - solaire_sec
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: solaire_sec_secondary_local_tasks
+theme: solaire_sec
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

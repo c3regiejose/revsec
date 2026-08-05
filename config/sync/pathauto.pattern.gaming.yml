@@ -1,0 +1,23 @@
+uuid: 719f87ae-7859-47a0-aa7d-3062a38a1089
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gaming
+  module:
+    - node
+id: gaming
+label: Gaming
+type: 'canonical_entities:node'
+pattern: '/gaming/[node:title]'
+selection_criteria:
+  57591c77-2af0-42a9-a2de-10e3d87fc86b:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      gaming: gaming
+selection_logic: and
+weight: -5
+relationships: {  }

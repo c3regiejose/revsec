@@ -1,0 +1,23 @@
+uuid: d41e49ac-fc01-400d-bb2b-970c824e7ab8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.rooms
+  module:
+    - node
+id: rooms
+label: Rooms
+type: 'canonical_entities:node'
+pattern: '/rooms/[node:title]'
+selection_criteria:
+  5fac355a-5642-4418-bdfe-a13a5d5ee9fe:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      rooms: rooms
+selection_logic: and
+weight: -5
+relationships: {  }

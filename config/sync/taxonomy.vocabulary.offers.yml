@@ -1,0 +1,9 @@
+uuid: bf583fea-add7-400a-b926-ed9bd96fd924
+langcode: en
+status: true
+dependencies: {  }
+name: Offers
+vid: offers
+description: 'Offers Category'
+weight: 0
+new_revision: false

@@ -1,0 +1,19 @@
+uuid: 59b70aac-2fbd-42aa-9b3e-9581bce9fccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.experience_signature
+id: paragraph.experience_signature.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: experience_signature
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

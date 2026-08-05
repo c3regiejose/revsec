@@ -1,0 +1,19 @@
+uuid: 077afc2f-3b5a-4202-8d70-80842b7d0cfe
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - view_mode_selector
+id: paragraph.field_display_layout
+field_name: field_display_layout
+entity_type: paragraph
+type: view_mode_selector
+settings: {  }
+module: view_mode_selector
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

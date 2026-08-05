@@ -1,0 +1,22 @@
+uuid: 4113a2de-fdfa-42bd-865f-98d6d4e989af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_summary
+    - node.type.gaming
+  module:
+    - text
+id: node.gaming.field_teaser_summary
+field_name: field_teaser_summary
+entity_type: node
+bundle: gaming
+label: 'Teaser Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

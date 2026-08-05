@@ -1,0 +1,17 @@
+uuid: d6bd7344-14a4-4fcc-852d-e19ce12f5b13
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Experience
+type: experience
+description: 'Use <em>Experience</em> for creating pages for <strong>Theatre, Wellness Recreations</strong> like: <em>Theatre Events</em>,<em>Gym</em>,<em>Pool Side</em>, etc.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

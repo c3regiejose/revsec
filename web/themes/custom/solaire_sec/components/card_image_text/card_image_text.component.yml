@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Card
+description: A reusable card component.
+status: stable
+
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content
+      description: The content.
+    position:
+      type: string
+      title: Image Position
+      description: The position of the image.
+
+slots:
+  image:
+    title: Image
+    description: Image render array.

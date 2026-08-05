@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Swiper
+description: A reusable Swiper layout
+status: stable
+
+libraryOverrides:
+  dependencies:
+    - solaire_sec/swiper
+
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The card title.
+
+slots:
+  cardItem:
+    title: Card Item
+    description: Card render array.

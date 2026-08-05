@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__content {
+  padding: 1.5rem;
+}
+
+.card__title {
+  margin: 0 0 1rem;
+}
+
+.card__body {
+  margin-bottom: 1rem;
+}
+
+.card__footer {
+  margin-top: auto;
+}
+
+.card__cta {
+  text-decoration: none;
+}
+
+.card--featured {
+  border-width: 2px;
+}
+
+.card--horizontal {
+  flex-direction: row;
+}

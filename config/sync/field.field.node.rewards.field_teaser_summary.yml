@@ -1,0 +1,22 @@
+uuid: f895dda2-17bc-44e7-a382-64c2542190b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_summary
+    - node.type.rewards
+  module:
+    - text
+id: node.rewards.field_teaser_summary
+field_name: field_teaser_summary
+entity_type: node
+bundle: rewards
+label: 'Teaser Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

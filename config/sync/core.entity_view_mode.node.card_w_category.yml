@@ -1,0 +1,11 @@
+uuid: faa6e0d8-6524-444c-831d-4f22a49fbf91
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_w_category
+label: 'Card w Category'
+description: null
+targetEntityType: node
+cache: true

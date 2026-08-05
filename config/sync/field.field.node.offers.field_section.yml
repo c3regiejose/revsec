@@ -1,0 +1,60 @@
+uuid: 793c32de-b6df-400d-872f-e41b0af75dd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.offers
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.experience_signature
+    - paragraphs.paragraphs_type.information_block
+    - paragraphs.paragraphs_type.promotions
+  module:
+    - entity_reference_revisions
+id: node.offers.field_section
+field_name: field_section
+entity_type: node
+bundle: offers
+label: Section
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      information_block: information_block
+      block: block
+      experience_signature: experience_signature
+      accordion: accordion
+      promotions: promotions
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 7
+        enabled: true
+      banner:
+        weight: 4
+        enabled: false
+      block:
+        weight: 6
+        enabled: true
+      experience_signature:
+        weight: 6
+        enabled: true
+      information_block:
+        weight: 2
+        enabled: true
+      main_banner:
+        weight: 6
+        enabled: false
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 9
+        enabled: true
+field_type: entity_reference_revisions

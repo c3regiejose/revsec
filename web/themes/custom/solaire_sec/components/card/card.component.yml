@@ -1,0 +1,55 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Card
+description: A reusable card component.
+status: stable
+
+props:
+  type: object
+
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The card title.
+
+    url:
+      type: string
+      title: URL
+      description: Link destination.
+
+    target:
+      type: string
+      title: Link Target
+      default: "_self"
+
+    cta:
+      type: string
+      title: CTA Label
+
+    variant:
+      type: string
+      title: Variant
+      default: default
+      enum:
+        - default
+        - featured
+        - horizontal
+
+    modifier:
+      type: string
+      title: Additional CSS classes
+      default: ""
+
+slots:
+  image:
+    title: Image
+    description: Image render array.
+
+  body:
+    title: Body
+    description: Body/content render array.
+
+  footer:
+    title: Footer
+    description: Optional footer content.

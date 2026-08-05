@@ -1,0 +1,23 @@
+.main-swiper {
+  overflow: hidden;
+  margin: 2rem calc(var(--edge) * -1) 2rem;
+  text-align: center;
+  position: relative;
+  --swiper-navigation-sides-offset: calc(var(--swiper-navigation-size) / 2);
+  --swiper-theme-color: var(--background);
+  --swiper-pagination-bullet-inactive-color: var(--accent);
+  --swiper-pagination-color: var(--secondary);
+}
+
+.main-swiper .swiper-button-prev,
+.main-swiper .swiper-button-next {
+  background-color: var(--primary);
+  width: var(--swiper-navigation-size);
+  opacity: 0.75;
+}
+
+.main-swiper .swiper-button-prev::after,
+.main-swiper .swiper-button-next::after {
+  font-size: 1rem;
+  color: var(--background);;
+}

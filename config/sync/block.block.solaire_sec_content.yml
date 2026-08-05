@@ -1,0 +1,22 @@
+uuid: 5d9a7d6b-fca2-4418-a792-a7abeb21e76a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - solaire_sec
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: solaire_sec_content
+theme: solaire_sec
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

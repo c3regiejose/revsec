@@ -1,0 +1,25 @@
+uuid: a28c2ac4-e989-4206-9566-f7e2f084a3aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promotion_items.field_referenced_content
+    - paragraphs.paragraphs_type.promotion_items
+id: paragraph.promotion_items.default
+targetEntityType: paragraph
+bundle: promotion_items
+mode: default
+content:
+  field_referenced_content:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

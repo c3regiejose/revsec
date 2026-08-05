@@ -1,0 +1,189 @@
+@import "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --text-sans: "Figtree", sans-serif;
+  --text-serif: "Unna", serif;
+  --base-font: "Figtree", sans-serif;
+
+  --background: #ffffff;
+
+  --background-muted: #f2f2f2;
+  --background-accent: #d7d7d7;
+  --accent-200: #f6f6f6;
+  --accent: #acacac;
+  --accent-foreground: #939393;
+  --foreground: #1d1c1a;
+  --primary: #1d1c1a;
+  --primary-hover: #2e2e2e;
+  --booking-widget: #f0f1ec;
+  --bookingtabs-background: #acacac;
+  /* --primary-hover: #df6a2e; */
+  --primary-foreground: #ffffff;
+
+  --secondary: #f5b335;
+  --secondary-muted: #fbbe75;
+  --secondary-accent: #f8f5ee;
+
+  --icon: #1d1c1a;
+
+  --ease: cubic-bezier(0.78, 0.41, 0.36, 0.89);
+
+  --border: var(var(--primary));
+
+  --nav-background: #cdcdcd;
+  --error: #c53232;
+
+  --text-3x: clamp(0.68rem, -0.36vi + 0.81rem, 0.58rem);
+  --text-2x: clamp(0.75rem, -0.3vi + 0.86rem, 0.66rem);
+  --text-xs: clamp(0.83rem, -0.22vi + 0.9rem, 0.76rem);
+  --text-sm: clamp(0.91rem, -0.12vi + 0.95rem, 0.88rem);
+  --text-md: clamp(1rem, 0.02vi + 0.99rem, 1.01rem);
+  --text-lg: clamp(1.1rem, 0.19vi + 1.03rem, 1.16rem);
+  --text-xl: clamp(1.21rem, 0.41vi + 1.07rem, 1.33rem);
+  --text-2xl: clamp(1.33rem, 0.67vi + 1.1rem, 1.53rem);
+  --text-3xl: clamp(1.46rem, 1vi + 1.12rem, 1.76rem);
+  --text-4xl: clamp(1.61rem, 1.4vi + 1.13rem, 2.02rem);
+  --text-5xl: clamp(1.77rem, 1.88vi + 1.13rem, 2.33rem);
+  --text-6xl: clamp(1.95rem, 2.46vi + 1.1rem, 2.68rem);
+  --text-7xl: clamp(2.14rem, 3.15vi + 1.06rem, 3.08rem);
+  --text-8xl: clamp(2.36rem, 3.99vi + 0.99rem, 3.54rem);
+
+  /* Backward-compat aliases — remove once all references are migrated */
+  --text-base: var(--text-md);
+  --text-3xs: var(--text-3x);
+  --text-2xs: var(--text-2x);
+
+  --header-eyebrow-height: 2.5rem;
+  --logo-background: #1e1e1e;
+  --header-height: 5rem;
+  --logo-width: 7rem;
+  --logo-word-height: 30%;
+  --logo-word-width: 80%;
+  --logo-sun: 2.75rem;
+
+  --day-abbreviation-width: 7rem;
+  /* booking  */
+  --bookingtabs-height: 4rem;
+
+  --swiper-navigation-size: 2.5rem;
+  --swiper-theme-background: var(--primary);
+  --swiper-theme-color: #ffffff;
+  --swiper-pagination-bullet-inactive-color: var(--accent);
+  --swiper-pagination-color: var(--secondary);
+  --container-size: clamp(1200px, 80vw, 1600px);
+  --edge: 1.25rem;
+
+  --orange: #df6a2e;
+
+  --lifestyle: #ddaa95;
+  --silver: #c1c1c1;
+  --gold: #d1b562;
+
+  --crystal: #bbb0a3;
+  --sapphire: #2467cd;
+  --emerald: #1ca062;
+  --opal: #be53e2;
+  --ruby: #b02525;
+  --diamond: #969696;
+}
+
+.theme-media {
+  .theme-light {
+    display: block;
+  }
+
+  .theme-dark {
+    display: none;
+  }
+}
+
+.dark,
+[data-theme="dark"] {
+  --background: #1d1c1a;
+  --background-muted: #2e2e2e;
+  --background-accent: #292c30;
+  --accent-200: #2e2e2e;
+  --accent: #585856;
+  --foreground: #ffffff;
+  --primary: #df6a2e;
+  --primary-hover: #cd5b22;
+  --primary-foreground: #ffffff;
+  --nav-background: #151515;
+  --icon: var(--secondary-muted);
+  --booking-widget: #292c30;
+  --bookingtabs-background: #1d1c1a;
+
+  --secondary-accent: #2c2c2c;
+
+  /* --secondary-muted: #2e2e2e; */
+
+  /* --lifestyle: #4a2f25;
+  --silver: #5a5a5a;
+  --gold: #6e5b2a;
+  --platinum: #535353;
+  --emerald: #42534c;
+  --ruby: #4d3939;
+  --diamond: #2d2d2d; */
+
+  .signup-bottom {
+    color: var(--foreground);
+  }
+
+  /* .btn-text::after {
+    content: url("/sites/default/files/inline-images/icon/arrow-right-circled-orange.svg");
+  } */
+
+  .header-first-left .text-bold {
+    color: var(--primary);
+  }
+
+  .theme-media {
+    .theme-light {
+      display: none;
+    }
+
+    .theme-dark {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  :root {
+    --edge: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --edge: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --edge: 2rem;
+    --logo-width: 10rem;
+
+    --text-3x: clamp(0.57rem, -0.18vi + 0.69rem, 0.51rem);
+    --text-2x: clamp(0.66rem, -0.13vi + 0.74rem, 0.61rem);
+    --text-xs: clamp(0.76rem, -0.05vi + 0.79rem, 0.74rem);
+    --text-sm: clamp(0.87rem, 0.05vi + 0.84rem, 0.89rem);
+    --text-md: clamp(1rem, 0.19vi + 0.88rem, 1.06rem);
+    --text-lg: clamp(1.15rem, 0.37vi + 0.91rem, 1.27rem);
+    --text-xl: clamp(1.32rem, 0.62vi + 0.93rem, 1.53rem);
+    --text-2xl: clamp(1.52rem, 0.94vi + 0.92rem, 1.84rem);
+    --text-3xl: clamp(1.75rem, 1.36vi + 0.88rem, 2.2rem);
+    --text-4xl: clamp(2.01rem, 1.89vi + 0.8rem, 2.64rem);
+    --text-5xl: clamp(2.31rem, 2.57vi + 0.67rem, 3.17rem);
+    --text-6xl: clamp(2.66rem, 3.42vi + 0.47rem, 3.81rem);
+    --text-7xl: clamp(3.06rem, 4.51vi + 0.18rem, 4.57rem);
+    --text-8xl: clamp(3.52rem, 5.86vi + -0.23rem, 5.48rem);
+
+    /* Backward-compat aliases — remove once all references are migrated */
+    --text-base: var(--text-md);
+    --text-3xs: var(--text-3x);
+    --text-2xs: var(--text-2x);
+  }
+}

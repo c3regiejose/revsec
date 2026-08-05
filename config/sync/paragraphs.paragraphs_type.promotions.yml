@@ -1,0 +1,10 @@
+uuid: 7cfe77e0-8ac8-44ec-ade1-749b7c8efdc4
+langcode: en
+status: true
+dependencies: {  }
+id: promotions
+label: Promotions
+icon_uuid: null
+icon_default: null
+description: 'A reusable component for displaying promotional content such as special offers, discounts, featured campaigns'
+behavior_plugins: {  }

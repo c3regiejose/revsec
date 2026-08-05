@@ -1,0 +1,11 @@
+uuid: 0916eb3e-4692-478b-b017-c44daee8a231
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.hero_cover
+label: 'Hero Cover'
+description: null
+targetEntityType: paragraph
+cache: true

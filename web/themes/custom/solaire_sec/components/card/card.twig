@@ -1,0 +1,43 @@
+{% set classes = [
+  'card',
+  'card--' ~ variant,
+  modifier ? modifier : '',
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {% if card.image %}
+    <div class="card__image">
+      {% block image %}
+      {% endblock %}
+    </div>
+  {% endif %}
+
+
+  <div class="card__content text-align-center">
+
+    {% if title %}
+      <h3 class="card__title">
+        {{ title }}
+      </h3>
+    {% endif %}
+
+
+    {% if card.body %}
+      <div class="card__body">
+        {% block body %}
+        {% endblock %}
+      </div>
+    {% endif %}
+
+
+    {# {% if footer %}
+      <div class="card__footer">
+        {% block footer %}
+        {% endblock %}
+      </div>
+    {% endif %} #}
+
+  </div>
+
+</article>

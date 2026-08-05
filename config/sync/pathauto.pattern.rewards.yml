@@ -1,0 +1,23 @@
+uuid: 9807bffb-1719-41d2-8022-b2a5baa49f32
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.rewards
+  module:
+    - node
+id: rewards
+label: Rewards
+type: 'canonical_entities:node'
+pattern: '/rewards/[node:title]'
+selection_criteria:
+  70fd44b6-87ea-41d1-8cb7-56a027257dff:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      rewards: rewards
+selection_logic: and
+weight: -5
+relationships: {  }

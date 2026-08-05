@@ -1,0 +1,11 @@
+uuid: 276e456d-ce46-4e27-abeb-af9cd693371c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.experience
+id: node.experience
+target_entity_type_id: node
+target_bundle: experience
+default_langcode: site_default
+language_alterable: false

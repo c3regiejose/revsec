@@ -1,0 +1,21 @@
+uuid: c3575713-9824-4952-b955-9caab204f71d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_style
+    - paragraphs.paragraphs_type.image_and_text
+  module:
+    - field_image_style
+id: paragraph.image_and_text.field_image_style
+field_name: field_image_style
+entity_type: paragraph
+bundle: image_and_text
+label: 'Image Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: image_style

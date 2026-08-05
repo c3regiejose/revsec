@@ -1,0 +1,18 @@
+uuid: 1b7a9817-ed6a-41fd-9561-7c620f3a8988
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Gaming
+type: gaming
+description: "Use <em>Gaming</em> for creating pages for <strong>Solaire North's casino games</strong> like:  <em>Baccarat</em>,<em>Poker</em>,<em>Slot Machines</em>, etc."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

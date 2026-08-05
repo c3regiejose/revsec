@@ -1,0 +1,104 @@
+uuid: b73a3c27-c7a3-4927-9aef-7e66c1400f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_w_category
+    - field.field.node.offers.field_banner
+    - field.field.node.offers.field_category
+    - field.field.node.offers.field_mobile_thumbnail
+    - field.field.node.offers.field_section
+    - field.field.node.offers.field_teaser_summary
+    - node.type.offers
+  module:
+    - ds
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_mobile_banner
+        - field_category
+        - node_title
+        - field_teaser_summary
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+id: node.offers.card_w_category
+targetEntityType: node
+bundle: offers
+mode: card_w_category
+content:
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: true
+            fi-el: span
+            fi-cl: item-category
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: ds_content
+  field_teaser_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+hidden:
+  field_banner: true
+  field_mobile_thumbnail: true
+  field_section: true
+  langcode: true
+  links: true

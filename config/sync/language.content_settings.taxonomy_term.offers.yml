@@ -1,0 +1,11 @@
+uuid: e9fff83e-bef0-411a-8ae6-4110603092ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.offers
+id: taxonomy_term.offers
+target_entity_type_id: taxonomy_term
+target_bundle: offers
+default_langcode: site_default
+language_alterable: false

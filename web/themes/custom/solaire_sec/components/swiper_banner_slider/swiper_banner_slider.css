@@ -1,0 +1,19 @@
+.swiper-main-banner-slider {
+  width: 100dvw;
+  left: calc(-1 * (100vw - 100%) / 2);
+  position: relative;
+}
+
+.swiper-main-banner-slider .desktop-view {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-main-banner-slider .desktop-view {
+    display: block;
+  }
+
+  .swiper-main-banner-slider .mobile-view {
+    display: none;
+  }
+}

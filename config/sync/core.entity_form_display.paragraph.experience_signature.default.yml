@@ -1,0 +1,43 @@
+uuid: ed1d585c-ec06-4fb4-8b46-ffe3d7a5cdce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.experience_signature.field_content
+    - field.field.paragraph.experience_signature.field_svg
+    - field.field.paragraph.experience_signature.field_title
+    - paragraphs.paragraphs_type.experience_signature
+  module:
+    - text
+id: paragraph.experience_signature.default
+targetEntityType: paragraph
+bundle: experience_signature
+mode: default
+content:
+  field_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_svg:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

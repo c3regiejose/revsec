@@ -1,0 +1,58 @@
+uuid: c1ad2671-99da-4e64-b368-0ecbe0e079cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.gaming
+    - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.experience_signature
+    - paragraphs.paragraphs_type.information_block
+    - paragraphs.paragraphs_type.promotions
+  module:
+    - entity_reference_revisions
+id: node.gaming.field_section
+field_name: field_section
+entity_type: node
+bundle: gaming
+label: Section
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      information_block: information_block
+      promotions: promotions
+      block: block
+      experience_signature: experience_signature
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      banner:
+        weight: 11
+        enabled: false
+      block:
+        weight: 12
+        enabled: true
+      experience_signature:
+        weight: 13
+        enabled: true
+      information_block:
+        weight: 2
+        enabled: true
+      main_banner:
+        weight: 15
+        enabled: false
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 9
+        enabled: true
+field_type: entity_reference_revisions

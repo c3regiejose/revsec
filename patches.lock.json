@@ -1,0 +1,29 @@
+{
+    "_hash": "b56c3addde31bcdead58645fd754d960a3d8be1e03bb1af4ceba5df98dbe8fad",
+    "patches": {
+        "drupal/entity_share": [
+            {
+                "package": "drupal/entity_share",
+                "description": "Issue #3587843: Fix entity_share_client",
+                "url": "patches/entity_share_client-3587843-2.patch",
+                "sha256": "149c3fb5c99b9ff25069dc2580612ee64814c99a97e982e6b2878298badfa982",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/field_image_style": [
+            {
+                "package": "drupal/field_image_style",
+                "description": "Issue #3593351: PHP 8.4: getSettableOptions()",
+                "url": "patches/field_image_style-php84-3593351.patch",
+                "sha256": "2b4c1f52f484d7451eb61f855256168d47e6dc860ee455c52fabd1ec0d3241ea",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}

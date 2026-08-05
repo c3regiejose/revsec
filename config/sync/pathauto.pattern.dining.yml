@@ -1,0 +1,23 @@
+uuid: 9674ff45-57fd-4fa8-a6aa-17aea97d199a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dining
+  module:
+    - node
+id: dining
+label: Dining
+type: 'canonical_entities:node'
+pattern: '/dining/[node:title]'
+selection_criteria:
+  9ef3c38d-3642-469c-be6d-7f84b2742fd4:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      dining: dining
+selection_logic: and
+weight: -5
+relationships: {  }

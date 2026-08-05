@@ -1,0 +1,10 @@
+uuid: c45dd673-c0e7-4002-af87-0c14749b19e1
+langcode: en
+status: true
+dependencies: {  }
+id: block
+label: Block
+icon_uuid: null
+icon_default: null
+description: 'A reusable component for displaying custom blocks within content pages.'
+behavior_plugins: {  }

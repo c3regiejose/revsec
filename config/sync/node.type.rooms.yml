@@ -1,0 +1,17 @@
+uuid: d1b20253-84aa-4569-89d3-6dff3a51a52b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Rooms
+type: rooms
+description: 'Use <em>Rooms</em> for creating pages under <strong>Rooms and Suites</strong> like:  <em>Signature Suite</em>,<em>Deluxe Room</em>,<em>Grand Deluxe</em>, etc.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

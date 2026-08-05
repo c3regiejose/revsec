@@ -1,0 +1,20 @@
+uuid: f4a1cc03-b66c-4aa7-a3b9-74bea29aa298
+langcode: en
+status: false
+dependencies:
+  theme:
+    - solaire_sec
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: solaire_sec_page_title
+theme: solaire_sec
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

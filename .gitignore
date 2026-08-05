@@ -1,0 +1,60 @@
+# Ignore core, contributed modules, themes, and libraries managed by Composer
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+
+# Ignore Drupal settings and files
+# /web/sites/*/settings.php
+/web/sites/*/settings.ddev.php
+/web/sites/*/services.yml
+/web/sites/*/services.local.yml
+
+# Ignore files directory (user uploads, cache, etc.)
+/web/sites/*/files/
+/web/sites/*/private/
+
+# Ignore temporary and cache files
+/tmp/
+/cache/
+*.log
+*.cache
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Ignore PHPUnit and test artifacts
+/phpunit.xml
+/phpunit.xml.dist
+/phpunit.xml.cache
+
+# Ignore Drush generated files
+/drush/sites/self.site.yml
+
+# Ignore Node/NPM if used for themes
+/node_modules/
+/web/themes/custom/*/node_modules/
+/web/themes/custom/*/dist/
+
+# Ignore build artifacts
+/build/
+/dist/
+
+# Ignore Composer lock only if you're building libraries (optional)
+# For apps, you usually WANT composer.lock committed
+# /composer.lock
+
+# Ignore backup files
+*.bak
+*.old
+
+# Ignore OS files
+Thumbs.db

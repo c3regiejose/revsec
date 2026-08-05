@@ -1,0 +1,26 @@
+name: 'Solaire Entertainment City'
+type: theme
+base theme: olivero
+version: 1.0.0
+libraries:
+  - solaire_sec/base
+  - solaire_sec/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - solaire_sec/user
+  core/drupal.dropbutton:
+    - solaire_sec/dropbutton
+  core/drupal.dialog:
+    - solaire_sec/dialog
+  file/drupal.file:
+    - solaire_sec/file
+  core/drupal.item-list:
+    - solaire_sec/item-list
+  core/drupal.progress:
+    - solaire_sec/progress
+  core/drupal.tablesort:
+    - solaire_sec/drupal.tablesort
+description: ''
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.4.4'

@@ -1,0 +1,13 @@
+uuid: 3c7bc006-cb81-4c2f-ac08-00d565dd4696
+langcode: en
+status: true
+dependencies: {  }
+id: snstg
+label: SNSTG
+url: 'https://snstg.ddev.site'
+auth:
+  pid: basic_auth
+  uuid: 74c520a5-1234-4c0a-a66d-b81e9a3a3e1c
+  data:
+    credential_provider: entity_share
+    storage_key: 74c520a5-1234-4c0a-a66d-b81e9a3a3e1c

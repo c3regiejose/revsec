@@ -1,0 +1,34 @@
+uuid: 2b8e61e4-ca78-4693-b005-1628789ba838
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_layout
+    - paragraphs.paragraphs_type.main_banner
+  module:
+    - view_mode_selector
+id: paragraph.main_banner.field_display_layout
+field_name: field_display_layout
+entity_type: paragraph
+bundle: main_banner
+label: 'Display Layout'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  view_modes:
+    default:
+      enable: false
+      hide_title: false
+      icon: {  }
+    hero_cover:
+      enable: true
+      hide_title: false
+      icon: {  }
+    hero_slider:
+      enable: true
+      hide_title: false
+      icon: {  }
+field_type: view_mode_selector

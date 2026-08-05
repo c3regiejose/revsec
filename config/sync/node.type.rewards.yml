@@ -1,0 +1,17 @@
+uuid: ed6da2bc-7949-4120-b0b6-3c566bd6472d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Rewards
+type: rewards
+description: "Use <em>Rewards</em> for creating pages for <strong>Solaire North's Rewards</strong>"
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

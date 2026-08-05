@@ -1,0 +1,10 @@
+uuid: 0547c2c0-96fb-47f7-af73-d768433f52e6
+langcode: en
+status: true
+dependencies: {  }
+id: promotion_items
+label: 'Promotion Items'
+icon_uuid: null
+icon_default: null
+description: 'Reference one or more published content items to feature in this promotion section. The items will be rendered in the order they are listed.'
+behavior_plugins: {  }

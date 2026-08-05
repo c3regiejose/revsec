@@ -1,0 +1,39 @@
+uuid: ddd7b4a7-35a8-499f-8436-752eb81b79a1
+langcode: en
+status: true
+dependencies: {  }
+id: snstg
+label: SNSTG
+import_maxsize: 10
+import_processor_settings:
+  changed_time:
+    weights:
+      process_entity: 100
+  default_data_processor:
+    weights:
+      is_entity_importable: -10
+      post_entity_save: 0
+      prepare_importable_entity_data: -100
+    policy: default
+    update_policy: false
+  entity_reference:
+    weights:
+      process_entity: 30
+    max_recursion_depth: -1
+  link_internal_content_importer:
+    weights:
+      prepare_importable_entity_data: 20
+  path_alias_processor:
+    weights:
+      prepare_importable_entity_data: -100
+  physical_file:
+    weights:
+      process_entity: 0
+    rename: true
+  revision:
+    weights:
+      prepare_importable_entity_data: 0
+      process_entity: 10
+    enforce_new_revision: true
+    translation_affected: false
+    revision_log_message: automatic

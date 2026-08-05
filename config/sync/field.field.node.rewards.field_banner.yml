@@ -1,0 +1,52 @@
+uuid: cc9195a6-0307-4dd0-876e-ae6d33dddf9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner
+    - node.type.rewards
+    - paragraphs.paragraphs_type.main_banner
+  module:
+    - entity_reference_revisions
+id: node.rewards.field_banner
+field_name: field_banner
+entity_type: node
+bundle: rewards
+label: Banner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      main_banner: main_banner
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 9
+        enabled: false
+      banner:
+        weight: 4
+        enabled: false
+      block:
+        weight: 11
+        enabled: false
+      experience_signature:
+        weight: 12
+        enabled: false
+      information_block:
+        weight: 5
+        enabled: false
+      main_banner:
+        weight: 6
+        enabled: true
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 15
+        enabled: false
+field_type: entity_reference_revisions

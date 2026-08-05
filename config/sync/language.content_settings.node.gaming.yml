@@ -1,0 +1,11 @@
+uuid: c9cbb262-b452-4c2e-89a4-59f0edc7cdf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gaming
+id: node.gaming
+target_entity_type_id: node
+target_bundle: gaming
+default_langcode: site_default
+language_alterable: false

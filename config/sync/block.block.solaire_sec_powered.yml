@@ -1,0 +1,22 @@
+uuid: fd2353dd-2be5-4580-b4a7-1f016c03336a
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - solaire_sec
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: solaire_sec_powered
+theme: solaire_sec
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

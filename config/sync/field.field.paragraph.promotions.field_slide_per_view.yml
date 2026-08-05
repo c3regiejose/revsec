@@ -1,0 +1,23 @@
+uuid: 5f32bfde-c781-474e-af8a-5b0cb5f99719
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_per_view
+    - paragraphs.paragraphs_type.promotions
+id: paragraph.promotions.field_slide_per_view
+field_name: field_slide_per_view
+entity_type: paragraph
+bundle: promotions
+label: 'Slide per view'
+description: 'Number of slides per view (Swiper property)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 3
+  prefix: ''
+  suffix: ''
+field_type: integer

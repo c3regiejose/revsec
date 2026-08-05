@@ -1,0 +1,26 @@
+.image-text-container.image-position-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.image-text-container.image-position-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  /* flex-direction: row-reverse; */
+}
+
+.image-text-container .image-text-child {
+  flex: 1;
+}
+
+.image-text-container {
+  margin-block: 2rem;
+}
+
+.image-text-container h2 {
+  margin-block: 1rem;
+  line-height: 1.15;
+}
