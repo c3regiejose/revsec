@@ -44,34 +44,20 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'paragraph--section'
+    'paragraph--section',
   ]
 %}
-
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
-      <div class="section-header {{ textALignment }}">
-        <h2>{{ content.field_title }}</h2>
-        {{ content.field_content }}
-      </div>
-      
-      {% embed 'solaire_sec:swiper' with {
-        cardItem: content.field_referenced_content_items,
-        slidesPerView: slidesPerView
+      {% embed 'solaire_sec:accordion' with {
+        accordionItems: accordion_items,
+        accordionTitle: accordion_title,
+        accordionContent: accordion_content
       } %}
-
-        {% block pagination %}
-        {% endblock %}
-
-        {# {% block navigation %}
-        {% endblock %} #}
-
-        {% block scrollbar %}
-        {% endblock %}
-
       {% endembed %}
+
     {% endblock %}
   </div>
 {% endblock paragraph %}

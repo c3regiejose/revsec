@@ -1,0 +1,20 @@
+<h2 class="accordion-title">
+  {{ accordionTitle }}
+</h2>
+<div class="accordion-description">
+  {{ accordionContent|raw }}
+</div>
+
+<div class="accordion">
+  {% for item in accordionItems %}
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false">
+        <span>{{ item.heading }}</span>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="accordion-panel">
+        <p>{{ item.content|raw }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -109,7 +109,56 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
       $variables = array_merge($variables, $this->buildTabsContentByViewVariables($paragraph));
     }
 
+    if ($paragraph->bundle() === 'accordion') {
+      $variables = array_merge($variables, $this->buildAccordionVariables($paragraph));
+    }
+
     return $variables;
+  }
+
+  /**
+   * Builds variables specific to the "accordion" paragraph bundle.
+   */
+  protected function buildAccordionVariables(ParagraphInterface $paragraph): array {
+    $result = [];
+
+    if ($paragraph->hasField('field_title') &&
+      !$paragraph->get('field_title')->isEmpty()
+    ) {
+      $result['accordion_title'] = $paragraph->get('field_title')->value;
+    }
+
+    if ($paragraph->hasField('field_content') &&
+      !$paragraph->get('field_content')->isEmpty()
+    ) {
+      $result['accordion_content'] = $paragraph->get('field_content')->value;
+    }
+
+    if ($paragraph->hasField('field_referenced_content_items') &&
+      !$paragraph->get('field_referenced_content_items')->isEmpty()
+    ) {
+      $ids = array_column(
+        $paragraph->get('field_referenced_content_items')->getValue(),
+        'target_id'
+      );
+
+      $paragraphsAccordion = $this->loadParagraphsByIds($ids);
+
+      foreach ($paragraphsAccordion as $parItem) {
+        if ($parItem->hasField('field_title') &&
+          !$parItem->get('field_title')->isEmpty()
+        ) {
+          $result['accordion_items'][$parItem->id()]['heading'] = $parItem->get('field_title')->value;
+        }
+
+        if ($parItem->hasField('field_content') &&
+          !$parItem->get('field_content')->isEmpty()
+        ) {
+          $result['accordion_items'][$parItem->id()]['content'] = $parItem->get('field_content')->value;
+        }
+      }
+    }
+    return $result;
   }
 
   /**
