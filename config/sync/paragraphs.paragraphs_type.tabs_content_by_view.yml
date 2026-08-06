@@ -1,0 +1,10 @@
+uuid: 0e723329-1fee-44d7-8906-46dbd4224bd5
+langcode: en
+status: true
+dependencies: {  }
+id: tabs_content_by_view
+label: 'Tabs Content by View'
+icon_uuid: null
+icon_default: null
+description: 'A reusable tabs component that renders multiple tabs from referenced view items'
+behavior_plugins: {  }

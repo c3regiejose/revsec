@@ -1,17 +1,17 @@
-uuid: 37dec420-c185-420d-b106-054ad34c3e4c
+uuid: 1a8a5e06-bb0f-4916-87d2-2ef07d277cb7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_mobile_banner
-    - node.type.dining
+    - field.storage.node.field_mobile_thumbnail
+    - node.type.rooms
   module:
     - image
-id: node.dining.field_mobile_banner
-field_name: field_mobile_banner
+id: node.rooms.field_mobile_thumbnail
+field_name: field_mobile_thumbnail
 entity_type: node
-bundle: dining
-label: 'Mobile Banner'
+bundle: rooms
+label: 'Tile Thumbnail'
 description: "This will overlap the page's default banner/s during mobile view<br/>\r\n<strong>Make sure the sequence of images are same as the default banner/s</strong><br/>\r\n<em>Required size:</em><br/>\r\n<strong>Width: 480px, Height: 707px</strong>"
 required: false
 translatable: false

@@ -1,0 +1,10 @@
+uuid: 8a395121-6369-4126-b5de-de0629c1e621
+langcode: en
+status: true
+dependencies: {  }
+id: tabs_content_by_reference_items
+label: 'Tabs Content by Reference Items'
+icon_uuid: null
+icon_default: null
+description: 'Represents a single tab and its referenced content within the Tabs Content by Reference component.'
+behavior_plugins: {  }

@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.rooms.field_banner
-    - field.field.node.rooms.field_mobile_banner
+    - field.field.node.rooms.field_featured_on_frontpage_bann
+    - field.field.node.rooms.field_mobile_thumbnail
     - field.field.node.rooms.field_section
     - field.field.node.rooms.field_teaser_summary
     - node.type.rooms
@@ -28,7 +29,17 @@ content:
     third_party_settings: {  }
     weight: 0
     region: ds_content
-  field_mobile_banner:
+  field_featured_on_frontpage_bann:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_mobile_thumbnail:
     type: image
     label: above
     settings:
@@ -37,7 +48,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
   field_section:
     type: entity_reference_revisions_entity_view

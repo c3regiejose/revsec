@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_banner
     - node.type.landing_page
+    - paragraphs.paragraphs_type.block_views
     - paragraphs.paragraphs_type.main_banner
   module:
     - entity_reference_revisions
@@ -23,10 +24,26 @@ settings:
   handler_settings:
     target_bundles:
       main_banner: main_banner
+      block_views: block_views
     negate: 0
     target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
       banner:
         weight: 4
+        enabled: false
+      block:
+        weight: 12
+        enabled: false
+      block_views:
+        weight: 14
+        enabled: true
+      experience_signature:
+        weight: 13
+        enabled: false
+      image_and_text:
+        weight: 14
         enabled: false
       information_block:
         weight: 5
@@ -34,4 +51,10 @@ settings:
       main_banner:
         weight: 6
         enabled: true
+      promotion_items:
+        weight: 18
+        enabled: false
+      promotions:
+        weight: 17
+        enabled: false
 field_type: entity_reference_revisions

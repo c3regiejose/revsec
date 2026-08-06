@@ -1,0 +1,11 @@
+uuid: 96b27207-8234-44f1-bab2-ccd0034b33cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.hero_slider
+label: 'Hero Slider'
+description: null
+targetEntityType: node
+cache: true

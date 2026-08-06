@@ -1,0 +1,70 @@
+uuid: c229ddfa-33e6-48c9-8801-4d0c2805f675
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_referenced_content_items
+    - paragraphs.paragraphs_type.tabs_content_by_view
+    - paragraphs.paragraphs_type.tabs_content_by_view_items
+  module:
+    - entity_reference_revisions
+id: paragraph.tabs_content_by_view.field_referenced_content_items
+field_name: field_referenced_content_items
+entity_type: paragraph
+bundle: tabs_content_by_view
+label: 'Referenced Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tabs_content_by_view_items: tabs_content_by_view_items
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      banner:
+        weight: 11
+        enabled: false
+      block:
+        weight: 12
+        enabled: false
+      block_views:
+        weight: 19
+        enabled: false
+      experience_signature:
+        weight: 13
+        enabled: false
+      image_and_text:
+        weight: 21
+        enabled: false
+      information_block:
+        weight: 14
+        enabled: false
+      main_banner:
+        weight: 15
+        enabled: false
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 9
+        enabled: false
+      tabs_content_by_reference:
+        weight: 26
+        enabled: false
+      tabs_content_by_reference_items:
+        weight: 27
+        enabled: false
+      tabs_content_by_view:
+        weight: 28
+        enabled: false
+      tabs_content_by_view_items:
+        weight: 15
+        enabled: true
+field_type: entity_reference_revisions

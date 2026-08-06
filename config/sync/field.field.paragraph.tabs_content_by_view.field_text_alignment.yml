@@ -1,0 +1,23 @@
+uuid: 583daa3e-b915-4c86-80e7-81a413997117
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_alignment
+    - paragraphs.paragraphs_type.tabs_content_by_view
+  module:
+    - options
+id: paragraph.tabs_content_by_view.field_text_alignment
+field_name: field_text_alignment
+entity_type: paragraph
+bundle: tabs_content_by_view
+label: 'Text Alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

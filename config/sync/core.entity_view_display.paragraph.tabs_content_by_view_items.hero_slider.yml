@@ -1,0 +1,25 @@
+uuid: db91c018-c17e-4068-834a-ca3fa9ce2a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.tabs_content_by_view_items.field_title
+    - field.field.paragraph.tabs_content_by_view_items.field_views_block
+    - paragraphs.paragraphs_type.tabs_content_by_view_items
+id: paragraph.tabs_content_by_view_items.hero_slider
+targetEntityType: paragraph
+bundle: tabs_content_by_view_items
+mode: hero_slider
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+hidden:
+  field_views_block: true

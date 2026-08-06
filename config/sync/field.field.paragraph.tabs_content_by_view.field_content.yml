@@ -1,0 +1,22 @@
+uuid: e6ba21cb-a25a-470f-a5a3-9e901b351a73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.tabs_content_by_view
+  module:
+    - text
+id: paragraph.tabs_content_by_view.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: tabs_content_by_view
+label: Blurb
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

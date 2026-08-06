@@ -1,0 +1,27 @@
+uuid: 0937d4c9-9c96-46cc-8af3-dbf1cf93dbc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.tabs_content_by_reference_items.field_display_layout
+    - field.field.paragraph.tabs_content_by_reference_items.field_referenced_content
+    - field.field.paragraph.tabs_content_by_reference_items.field_title
+    - paragraphs.paragraphs_type.tabs_content_by_reference_items
+id: paragraph.tabs_content_by_reference_items.hero_slider
+targetEntityType: paragraph
+bundle: tabs_content_by_reference_items
+mode: hero_slider
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+hidden:
+  field_display_layout: true
+  field_referenced_content: true

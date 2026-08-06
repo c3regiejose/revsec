@@ -1,0 +1,40 @@
+uuid: f5408cf7-18bc-421c-8906-072512a7b012
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.tabs_content_by_reference_items.field_display_layout
+    - field.field.paragraph.tabs_content_by_reference_items.field_referenced_content
+    - field.field.paragraph.tabs_content_by_reference_items.field_title
+    - paragraphs.paragraphs_type.tabs_content_by_reference_items
+  module:
+    - ds
+    - field_formatter_range
+id: paragraph.tabs_content_by_reference_items.card
+targetEntityType: paragraph
+bundle: tabs_content_by_reference_items
+mode: card
+content:
+  field_referenced_content:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 0
+    region: ds_content
+hidden:
+  field_display_layout: true
+  field_title: true

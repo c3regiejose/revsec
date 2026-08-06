@@ -1,0 +1,27 @@
+uuid: c81ee7b2-a3d8-46aa-ac79-ac987a7bac61
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.tabs_content_by_reference_items.field_display_layout
+    - field.field.paragraph.tabs_content_by_reference_items.field_referenced_content
+    - field.field.paragraph.tabs_content_by_reference_items.field_title
+    - paragraphs.paragraphs_type.tabs_content_by_reference_items
+id: paragraph.tabs_content_by_reference_items.hero_cover
+targetEntityType: paragraph
+bundle: tabs_content_by_reference_items
+mode: hero_cover
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_display_layout: true
+  field_referenced_content: true

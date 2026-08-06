@@ -1,0 +1,35 @@
+uuid: ac366256-35de-463f-8291-5fd80ef4cfc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs_content_by_view_items.field_title
+    - field.field.paragraph.tabs_content_by_view_items.field_views_block
+    - paragraphs.paragraphs_type.tabs_content_by_view_items
+  module:
+    - block_field
+id: paragraph.tabs_content_by_view_items.default
+targetEntityType: paragraph
+bundle: tabs_content_by_view_items
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_views_block:
+    type: block_field_default
+    weight: 3
+    region: content
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

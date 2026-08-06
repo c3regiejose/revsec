@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.field_banner
+    - field.field.node.landing_page.field_featured_on_frontpage_bann
     - field.field.node.landing_page.field_mobile_thumbnail
     - field.field.node.landing_page.field_section
     - field.field.node.landing_page.field_teaser_summary
@@ -48,6 +49,16 @@ content:
     third_party_settings: {  }
     weight: 0
     region: ds_content
+  field_featured_on_frontpage_bann:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_mobile_thumbnail:
     type: image
     label: above

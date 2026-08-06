@@ -1,0 +1,40 @@
+uuid: 3ecb75b5-2196-4974-b3b2-4d1f333f50b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card_w_category
+    - field.field.paragraph.tabs_content_by_view.field_content
+    - field.field.paragraph.tabs_content_by_view.field_referenced_content_items
+    - field.field.paragraph.tabs_content_by_view.field_text_alignment
+    - field.field.paragraph.tabs_content_by_view.field_title
+    - paragraphs.paragraphs_type.tabs_content_by_view
+  module:
+    - ds
+    - entity_reference_revisions
+id: paragraph.tabs_content_by_view.card_w_category
+targetEntityType: paragraph
+bundle: tabs_content_by_view
+mode: card_w_category
+content:
+  field_referenced_content_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: card_w_category
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 2
+    region: ds_content
+hidden:
+  field_content: true
+  field_text_alignment: true
+  field_title: true

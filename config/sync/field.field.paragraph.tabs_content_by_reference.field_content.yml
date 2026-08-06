@@ -1,0 +1,22 @@
+uuid: b993c8a4-1dac-44b6-a867-3d0467faebbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.tabs_content_by_reference
+  module:
+    - text
+id: paragraph.tabs_content_by_reference.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: tabs_content_by_reference
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

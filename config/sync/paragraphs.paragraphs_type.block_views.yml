@@ -1,0 +1,10 @@
+uuid: d946413c-5999-4c3c-99bb-b8e1e52e7ec6
+langcode: en
+status: true
+dependencies: {  }
+id: block_views
+label: 'Block - Views'
+icon_uuid: null
+icon_default: null
+description: 'A reusable component for displaying custom blocks within content pages.'
+behavior_plugins: {  }

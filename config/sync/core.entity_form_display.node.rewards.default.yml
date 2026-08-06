@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.rewards.field_banner
-    - field.field.node.rewards.field_mobile_banner
+    - field.field.node.rewards.field_featured_on_frontpage_bann
+    - field.field.node.rewards.field_mobile_thumbnail
     - field.field.node.rewards.field_section
     - field.field.node.rewards.field_teaser_summary
     - image.style.thumbnail
@@ -38,8 +39,10 @@ third_party_settings:
         width_breakpoint: 640
     group_banner:
       children:
+        - field_featured_on_frontpage_bann
         - field_banner
         - field_mobile_banner
+        - field_mobile_thumbnail
       label: Banner
       region: content
       parent_name: group_main
@@ -114,7 +117,7 @@ content:
     third_party_settings: {  }
   field_banner:
     type: paragraphs
-    weight: 7
+    weight: 11
     region: content
     settings:
       title: Paragraph
@@ -132,9 +135,16 @@ content:
         convert: '0'
         duplicate: duplicate
     third_party_settings: {  }
-  field_mobile_banner:
+  field_featured_on_frontpage_bann:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_mobile_thumbnail:
     type: image_image
-    weight: 8
+    weight: 13
     region: content
     settings:
       progress_indicator: throbber
@@ -164,7 +174,7 @@ content:
     third_party_settings: {  }
   field_teaser_summary:
     type: text_textarea
-    weight: 9
+    weight: 10
     region: content
     settings:
       rows: 5

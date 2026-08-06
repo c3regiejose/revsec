@@ -1,0 +1,25 @@
+uuid: 58a4dc99-fe7f-49fa-89af-f28f5bf9c3c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_block
+    - paragraphs.paragraphs_type.block_views
+  module:
+    - block_field
+id: paragraph.block_views.field_views_block
+field_name: field_views_block
+entity_type: paragraph
+bundle: block_views
+label: 'Views Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'views_block:solaire_frontpage-block_1': 'views_block:solaire_frontpage-block_1'
+field_type: block_field

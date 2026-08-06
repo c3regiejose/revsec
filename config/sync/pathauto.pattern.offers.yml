@@ -1,0 +1,23 @@
+uuid: 02fa75be-db1c-48c0-a467-e8621e62240a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.offers
+  module:
+    - node
+id: offers
+label: Offers
+type: 'canonical_entities:node'
+pattern: '/offer/[node:field_category]/[node:title]'
+selection_criteria:
+  9a8d1c47-5fb5-49d0-9fbb-62cc3a9f9a6b:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      offers: offers
+selection_logic: and
+weight: -5
+relationships: {  }

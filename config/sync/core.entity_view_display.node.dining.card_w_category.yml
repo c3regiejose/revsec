@@ -5,7 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.card_w_category
     - field.field.node.dining.field_banner
-    - field.field.node.dining.field_mobile_banner
+    - field.field.node.dining.field_featured_on_frontpage_bann
+    - field.field.node.dining.field_mobile_thumbnail
     - field.field.node.dining.field_section
     - field.field.node.dining.field_teaser_summary
     - node.type.dining
@@ -32,7 +33,8 @@ content:
     weight: 100
     region: content
 hidden:
-  field_mobile_banner: true
+  field_featured_on_frontpage_bann: true
+  field_mobile_thumbnail: true
   field_section: true
   field_teaser_summary: true
   langcode: true

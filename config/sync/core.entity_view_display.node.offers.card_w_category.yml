@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.card_w_category
     - field.field.node.offers.field_banner
     - field.field.node.offers.field_category
+    - field.field.node.offers.field_featured_on_frontpage_bann
     - field.field.node.offers.field_mobile_thumbnail
     - field.field.node.offers.field_section
     - field.field.node.offers.field_teaser_summary
@@ -98,6 +99,7 @@ content:
     region: ds_content
 hidden:
   field_banner: true
+  field_featured_on_frontpage_bann: true
   field_mobile_thumbnail: true
   field_section: true
   langcode: true

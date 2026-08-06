@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.offers.field_banner
     - field.field.node.offers.field_category
+    - field.field.node.offers.field_featured_on_frontpage_bann
     - field.field.node.offers.field_mobile_thumbnail
     - field.field.node.offers.field_section
     - field.field.node.offers.field_teaser_summary
@@ -26,6 +27,16 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_featured_on_frontpage_bann:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_mobile_thumbnail:
     type: image

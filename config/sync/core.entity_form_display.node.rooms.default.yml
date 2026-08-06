@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.rooms.field_banner
-    - field.field.node.rooms.field_mobile_banner
+    - field.field.node.rooms.field_featured_on_frontpage_bann
+    - field.field.node.rooms.field_mobile_thumbnail
     - field.field.node.rooms.field_section
     - field.field.node.rooms.field_teaser_summary
     - image.style.thumbnail
@@ -38,8 +39,10 @@ third_party_settings:
         width_breakpoint: 640
     group_banner:
       children:
+        - field_featured_on_frontpage_bann
         - field_banner
         - field_mobile_banner
+        - field_mobile_thumbnail
       label: Banner
       region: content
       parent_name: group_main
@@ -114,7 +117,7 @@ content:
     third_party_settings: {  }
   field_banner:
     type: paragraphs
-    weight: 6
+    weight: 8
     region: content
     settings:
       title: Paragraph
@@ -132,9 +135,16 @@ content:
         convert: '0'
         duplicate: duplicate
     third_party_settings: {  }
-  field_mobile_banner:
-    type: image_image
+  field_featured_on_frontpage_bann:
+    type: boolean_checkbox
     weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_mobile_thumbnail:
+    type: image_image
+    weight: 10
     region: content
     settings:
       progress_indicator: throbber
@@ -144,7 +154,7 @@ content:
         enabled: true
   field_section:
     type: paragraphs
-    weight: 2
+    weight: 12
     region: content
     settings:
       title: Paragraph
@@ -164,7 +174,7 @@ content:
     third_party_settings: {  }
   field_teaser_summary:
     type: text_textarea
-    weight: 1
+    weight: 13
     region: content
     settings:
       rows: 5
@@ -192,7 +202,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 12
     region: content
     settings:
       size: 60

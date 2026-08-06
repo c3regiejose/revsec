@@ -1,0 +1,10 @@
+uuid: f8c5796b-c567-4680-89d8-f88532757033
+langcode: en
+status: true
+dependencies: {  }
+id: tabs_content_by_view_items
+label: 'Tabs Content by View Items'
+icon_uuid: null
+icon_default: null
+description: 'Represents a single tab and its referenced view within the Tabs Content by View component.'
+behavior_plugins: {  }

@@ -1,0 +1,42 @@
+uuid: bd96e7a9-1f90-4e85-b888-3a7b8b39932d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs_content_by_reference_items.field_display_layout
+    - field.field.paragraph.tabs_content_by_reference_items.field_referenced_content
+    - field.field.paragraph.tabs_content_by_reference_items.field_title
+    - paragraphs.paragraphs_type.tabs_content_by_reference_items
+  module:
+    - view_mode_selector
+id: paragraph.tabs_content_by_reference_items.default
+targetEntityType: paragraph
+bundle: tabs_content_by_reference_items
+mode: default
+content:
+  field_display_layout:
+    type: view_mode_selector
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_referenced_content:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

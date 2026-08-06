@@ -1,0 +1,19 @@
+uuid: f17582a4-140e-4493-8e28-4d968d57c8c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.accordion_items
+id: paragraph.accordion_items.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: accordion_items
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

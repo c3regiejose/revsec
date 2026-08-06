@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.experience.field_banner
-    - field.field.node.experience.field_mobile_banner
+    - field.field.node.experience.field_featured_on_frontpage_bann
+    - field.field.node.experience.field_mobile_thumbnail
     - field.field.node.experience.field_section
     - field.field.node.experience.field_teaser_summary
     - image.style.thumbnail
@@ -38,8 +39,9 @@ third_party_settings:
         width_breakpoint: 640
     group_banenr:
       children:
+        - field_featured_on_frontpage_bann
         - field_banner
-        - field_mobile_banner
+        - field_mobile_thumbnail
       label: Banner
       region: content
       parent_name: group_main
@@ -114,7 +116,7 @@ content:
     third_party_settings: {  }
   field_banner:
     type: paragraphs
-    weight: 4
+    weight: 6
     region: content
     settings:
       title: Paragraph
@@ -132,9 +134,16 @@ content:
         convert: '0'
         duplicate: duplicate
     third_party_settings: {  }
-  field_mobile_banner:
-    type: image_image
+  field_featured_on_frontpage_bann:
+    type: boolean_checkbox
     weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_mobile_thumbnail:
+    type: image_image
+    weight: 7
     region: content
     settings:
       progress_indicator: throbber
@@ -172,7 +181,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true

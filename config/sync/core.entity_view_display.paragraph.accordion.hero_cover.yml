@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_cover
     - field.field.paragraph.accordion.field_content
+    - field.field.paragraph.accordion.field_referenced_content_items
+    - field.field.paragraph.accordion.field_text_alignment
     - field.field.paragraph.accordion.field_title
     - paragraphs.paragraphs_type.accordion
   module:
@@ -30,4 +32,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: ds_content
-hidden: {  }
+hidden:
+  field_referenced_content_items: true
+  field_text_alignment: true

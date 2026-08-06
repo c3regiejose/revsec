@@ -11,7 +11,7 @@ id: node.offers.field_mobile_thumbnail
 field_name: field_mobile_thumbnail
 entity_type: node
 bundle: offers
-label: 'Mobile Thumbnail'
+label: 'Tile Thumbnail'
 description: "This will overlap the page's default banner/s during mobile view<br/>\r\n<strong>Make sure the sequence of images are same as the default banner/s</strong><br/>\r\n<em>Required size:</em><br/>\r\n<strong>Width: 480px, Height: 707px</strong>"
 required: false
 translatable: false

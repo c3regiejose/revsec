@@ -1,0 +1,10 @@
+uuid: a69c1d90-9ace-4f07-a54b-f5d7f9586eb0
+langcode: en
+status: true
+dependencies: {  }
+id: tabs_content_by_reference
+label: 'Tabs Content by Reference'
+icon_uuid: null
+icon_default: null
+description: 'A reusable tabs component that renders multiple tabs from referenced content items. Each tab represents a linked entity, enabling structured content management and consistent presentation across pages.'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: d1dd2d34-c4e6-4fc1-bb79-3f4646410cc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_on_frontpage_bann
+    - node.type.offers
+id: node.offers.field_featured_on_frontpage_bann
+field_name: field_featured_on_frontpage_bann
+entity_type: node
+bundle: offers
+label: 'Featured on Frontpage banner'
+description: '<small>Will be this <strong>Page</strong> will be featured on <strong>frontpage banner</strong>?</small>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

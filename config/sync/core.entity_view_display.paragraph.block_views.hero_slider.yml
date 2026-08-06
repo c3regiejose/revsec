@@ -1,0 +1,35 @@
+uuid: fc3d2ae2-163c-41d1-93bb-6060c7542bfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.block_views.field_content
+    - field.field.paragraph.block_views.field_title
+    - field.field.paragraph.block_views.field_views_block
+    - paragraphs.paragraphs_type.block_views
+  module:
+    - text
+id: paragraph.block_views.hero_slider
+targetEntityType: paragraph
+bundle: block_views
+mode: hero_slider
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+hidden:
+  field_views_block: true

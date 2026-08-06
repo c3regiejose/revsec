@@ -6,10 +6,10 @@ dependencies:
     - field.storage.node.field_section
     - node.type.offers
     - paragraphs.paragraphs_type.accordion
-    - paragraphs.paragraphs_type.block
     - paragraphs.paragraphs_type.experience_signature
     - paragraphs.paragraphs_type.information_block
     - paragraphs.paragraphs_type.promotions
+    - paragraphs.paragraphs_type.tabs_content_by_view
   module:
     - entity_reference_revisions
 id: node.offers.field_section
@@ -27,10 +27,10 @@ settings:
   handler_settings:
     target_bundles:
       information_block: information_block
-      block: block
       experience_signature: experience_signature
       accordion: accordion
       promotions: promotions
+      tabs_content_by_view: tabs_content_by_view
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -41,10 +41,16 @@ settings:
         enabled: false
       block:
         weight: 6
-        enabled: true
+        enabled: false
+      block_views:
+        weight: 19
+        enabled: false
       experience_signature:
         weight: 6
         enabled: true
+      image_and_text:
+        weight: 21
+        enabled: false
       information_block:
         weight: 2
         enabled: true
@@ -57,4 +63,16 @@ settings:
       promotions:
         weight: 9
         enabled: true
+      tabs_content_by_reference:
+        weight: 26
+        enabled: false
+      tabs_content_by_reference_items:
+        weight: 27
+        enabled: false
+      tabs_content_by_view:
+        weight: 28
+        enabled: true
+      tabs_content_by_view_items:
+        weight: 15
+        enabled: false
 field_type: entity_reference_revisions

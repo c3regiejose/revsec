@@ -1,0 +1,9 @@
+uuid: d42d9e4a-83eb-4d01-be15-08b28756ac26
+langcode: en
+status: true
+dependencies: {  }
+name: Dining
+vid: dining
+description: null
+weight: 0
+new_revision: false

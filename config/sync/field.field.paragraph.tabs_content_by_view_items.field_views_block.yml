@@ -1,0 +1,24 @@
+uuid: 816aec6b-16dd-4dbb-8054-7223efb673a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_block
+    - paragraphs.paragraphs_type.tabs_content_by_view_items
+  module:
+    - block_field
+id: paragraph.tabs_content_by_view_items.field_views_block
+field_name: field_views_block
+entity_type: paragraph
+bundle: tabs_content_by_view_items
+label: 'Views Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids: {  }
+field_type: block_field

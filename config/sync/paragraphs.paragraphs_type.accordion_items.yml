@@ -1,0 +1,10 @@
+uuid: cb0f648b-cbee-4593-ab2b-064d948d362c
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_items
+label: 'Accordion Items'
+icon_uuid: null
+icon_default: null
+description: 'One expandable/collapsible entry for use within an Accordion component. Add a title and content for each item.'
+behavior_plugins: {  }

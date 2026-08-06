@@ -1,17 +1,17 @@
-uuid: cbed6291-99f1-4f8d-9628-51f68df13abd
+uuid: bc4d07ca-1801-4a89-9cfc-fde4689bf443
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_mobile_banner
-    - node.type.gaming
+    - field.storage.node.field_mobile_thumbnail
+    - node.type.rewards
   module:
     - image
-id: node.gaming.field_mobile_banner
-field_name: field_mobile_banner
+id: node.rewards.field_mobile_thumbnail
+field_name: field_mobile_thumbnail
 entity_type: node
-bundle: gaming
-label: 'Mobile Banner'
+bundle: rewards
+label: 'Tile Thumbnail'
 description: "This will overlap the page's default banner/s during mobile view<br/>\r\n<strong>Make sure the sequence of images are same as the default banner/s</strong><br/>\r\n<em>Required size:</em><br/>\r\n<strong>Width: 480px, Height: 707px</strong>"
 required: false
 translatable: false

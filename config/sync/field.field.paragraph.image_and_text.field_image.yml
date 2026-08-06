@@ -24,7 +24,7 @@ settings:
   file_extensions: 'png jpg jpeg webp'
   max_filesize: ''
   max_resolution: ''
-  min_resolution: 700x525
+  min_resolution: 640x480
   alt_field: true
   alt_field_required: true
   title_field: false
