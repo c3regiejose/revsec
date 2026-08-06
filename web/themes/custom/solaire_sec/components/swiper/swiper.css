@@ -2,6 +2,7 @@
   overflow: hidden;
   margin: 2rem calc(var(--edge) * -1) 2rem;
   text-align: center;
+  width: 100%;
   position: relative;
   --swiper-navigation-sides-offset: calc(var(--swiper-navigation-size) / 2);
   --swiper-theme-color: var(--background);

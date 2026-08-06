@@ -1,15 +1,18 @@
-.image-text-container.image-position-left {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-direction: row;
-}
 
-.image-text-container.image-position-right {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  /* flex-direction: row-reverse; */
+
+@media only screen and (min-width: 768px) {
+  .image-text-container.image-position-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .image-text-container.image-position-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
 }
 
 .image-text-container .image-text-child {
