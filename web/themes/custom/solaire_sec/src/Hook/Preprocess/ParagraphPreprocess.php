@@ -94,7 +94,7 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     if ($paragraph->hasField('field_text_alignment') &&
       !$paragraph->get('field_text_alignment')->isEmpty()
     ) {
-      $variables['textALignment'] = 'text-align-' . $paragraph->get('field_text_alignment')->value;
+      $variables['textAlignment'] = 'text-align-' . $paragraph->get('field_text_alignment')->value;
     }
 
     // Slide per view

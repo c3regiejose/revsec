@@ -1,8 +1,10 @@
-<h2 class="accordion-title">
-  {{ accordionTitle }}
-</h2>
-<div class="accordion-description">
-  {{ accordionContent|raw }}
+<div class="accordion-wrapper {{ textAlignment }}">
+  <h2 class="accordion-title">
+    {{ accordionTitle }}
+  </h2>
+  <div class="accordion-description">
+    {{ accordionContent|raw }}
+  </div>
 </div>
 
 <div class="accordion">
