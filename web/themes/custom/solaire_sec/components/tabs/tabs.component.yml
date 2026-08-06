@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Tabs
+description: A reusable Tabs layout
+status: stable
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The card title.
+
+slots:
+  tabItem:
+    title: Tab Item
+    description: Tab item render array.

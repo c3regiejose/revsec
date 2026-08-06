@@ -1,0 +1,30 @@
+<div class="wrap tabs-component">
+  <div class="heading {{ textAlignment }}">
+    <h2>{{ title }}</h2>
+
+    {% if content is not empty %}
+      {{ content|raw }}
+    {% endif %}
+  </div>
+  
+
+  <ul class="tabs" role="tablist">
+    {% for tab in tabItem %}
+      <li>
+        <button 
+          class="tab-btn{{ loop.first ? ' active' : '' }}" 
+          role="tab" 
+          aria-selected="{{ loop.first ? 'true' : 'false' }}" 
+          data-tab="{{ tab.heading_slug }}">
+            {{ tab.heading }}
+        </button>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% for tab in tabItem %}
+    <div class="panel{{ loop.first ? ' active' : '' }}" id="{{ tab.heading_slug }}">
+      <p>{{ tab.views_block }}</p>
+    </div>
+  {% endfor %}
+  </div>
