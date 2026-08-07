@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Card Icon
+description: A reusable card icon component.
+status: stable
+
+props:
+  type: object
+  properties:
+    iconCardsTitle:
+      type: string
+      title: Title
+      description: The title.
+    iconCardsContent:
+      type: string
+      title: Content
+      description: The content.
+    textAlignment:
+      type: string
+      title: Text Alignment
+      description: The text alignment.
+slots:
+  iconCardsIcon:
+      type: string
+      title: Icon
+      description: The icon.

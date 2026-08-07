@@ -1,0 +1,22 @@
+<div class="icon-card-wrapper {{ textAlignment }}">
+  <h2 class="accordion-title">
+    {{ iconCardsTitle }}
+  </h2>
+  <div class="accordion-description">
+    {{ iconCardsContent|raw }}
+  </div>
+</div>
+
+<div class="grid">
+  {% for item in iconCardsIcon %}
+    <div class="item">
+      <div class="icon-circle">
+        {{ item.icon|raw }}
+      </div>
+      <div class="icon-content">
+        <h4>{{ item.heading }}</h4>
+        {{ item.content|raw }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
