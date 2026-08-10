@@ -6,7 +6,6 @@ dependencies:
     - field.storage.node.field_section
     - node.type.experience
     - paragraphs.paragraphs_type.block
-    - paragraphs.paragraphs_type.experience_signature
     - paragraphs.paragraphs_type.information_block
     - paragraphs.paragraphs_type.promotions
   module:
@@ -28,7 +27,6 @@ settings:
       information_block: information_block
       promotions: promotions
       block: block
-      experience_signature: experience_signature
     negate: 0
     target_bundles_drag_drop:
       accordion:

@@ -1,0 +1,19 @@
+uuid: bbb11e15-08dd-4886-b760-236bef267b86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_svg_icon
+    - paragraphs.paragraphs_type.icon_card_item
+id: paragraph.icon_card_item.field_svg_icon
+field_name: field_svg_icon
+entity_type: paragraph
+bundle: icon_card_item
+label: 'SVG Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

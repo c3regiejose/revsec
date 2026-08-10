@@ -1,0 +1,35 @@
+uuid: bfbcd473-323e-416a-b42c-69b2a60246c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.icon_card_item.field_content
+    - field.field.paragraph.icon_card_item.field_svg_icon
+    - field.field.paragraph.icon_card_item.field_title
+    - paragraphs.paragraphs_type.icon_card_item
+  module:
+    - text
+id: paragraph.icon_card_item.hero_cover
+targetEntityType: paragraph
+bundle: icon_card_item
+mode: hero_cover
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_svg_icon: true

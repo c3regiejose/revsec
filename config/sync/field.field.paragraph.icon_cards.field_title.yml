@@ -1,15 +1,15 @@
-uuid: 59b70aac-2fbd-42aa-9b3e-9581bce9fccc
+uuid: 0c576e34-f97a-40f1-8689-ff41c7f20aa6
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.experience_signature
-id: paragraph.experience_signature.field_title
+    - paragraphs.paragraphs_type.icon_cards
+id: paragraph.icon_cards.field_title
 field_name: field_title
 entity_type: paragraph
-bundle: experience_signature
-label: Title
+bundle: icon_cards
+label: Heading
 description: ''
 required: false
 translatable: false

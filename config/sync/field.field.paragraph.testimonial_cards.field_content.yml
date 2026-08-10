@@ -1,0 +1,22 @@
+uuid: 91b7ee4d-b17e-4177-a6ca-e2d90672b451
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.testimonial_cards
+  module:
+    - text
+id: paragraph.testimonial_cards.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: testimonial_cards
+label: Blurb
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

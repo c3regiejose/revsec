@@ -1,17 +1,17 @@
-uuid: 24c024f4-10b4-49ab-8f64-9c8ab205fdbf
+uuid: 55136121-9bc4-429a-a75b-888527f7f4d3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_content
-    - paragraphs.paragraphs_type.experience_signature
+    - paragraphs.paragraphs_type.testimonial_card_item
   module:
     - text
-id: paragraph.experience_signature.field_content
+id: paragraph.testimonial_card_item.field_content
 field_name: field_content
 entity_type: paragraph
-bundle: experience_signature
-label: Content
+bundle: testimonial_card_item
+label: Testimonial
 description: ''
 required: false
 translatable: false

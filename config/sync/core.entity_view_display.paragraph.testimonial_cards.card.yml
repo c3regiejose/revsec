@@ -1,0 +1,73 @@
+uuid: a8af519f-19d2-40a4-85fa-1fb325cdd9b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.testimonial_cards.field_content
+    - field.field.paragraph.testimonial_cards.field_referenced_content_items
+    - field.field.paragraph.testimonial_cards.field_text_alignment
+    - field.field.paragraph.testimonial_cards.field_title
+    - paragraphs.paragraphs_type.testimonial_cards
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_formatter_range
+    - options
+id: paragraph.testimonial_cards.card
+targetEntityType: paragraph
+bundle: testimonial_cards
+mode: card
+content:
+  field_referenced_content_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: card
+      link: ''
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 5
+    region: content
+  field_text_alignment:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_content: true
+  field_title: true

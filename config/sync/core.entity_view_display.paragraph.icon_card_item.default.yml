@@ -1,36 +1,36 @@
-uuid: c421cac0-bbb0-4ee0-932b-1ae844b484da
+uuid: b604ad84-a869-42d8-b18a-c01e2fbd4b08
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.experience_signature.field_content
-    - field.field.paragraph.experience_signature.field_svg
-    - field.field.paragraph.experience_signature.field_title
-    - paragraphs.paragraphs_type.experience_signature
+    - field.field.paragraph.icon_card_item.field_content
+    - field.field.paragraph.icon_card_item.field_svg_icon
+    - field.field.paragraph.icon_card_item.field_title
+    - paragraphs.paragraphs_type.icon_card_item
   module:
     - text
-id: paragraph.experience_signature.default
+id: paragraph.icon_card_item.default
 targetEntityType: paragraph
-bundle: experience_signature
+bundle: icon_card_item
 mode: default
 content:
   field_content:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
-  field_svg:
+  field_svg_icon:
     type: basic_string
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
       link_rel: canonical

@@ -1,0 +1,52 @@
+uuid: 6ad72251-fad9-466d-bd99-133a2225d032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlight_cards.field_content
+    - field.field.paragraph.highlight_cards.field_referenced_content_items
+    - field.field.paragraph.highlight_cards.field_text_alignment
+    - field.field.paragraph.highlight_cards.field_title
+    - paragraphs.paragraphs_type.highlight_cards
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.highlight_cards.default
+targetEntityType: paragraph
+bundle: highlight_cards
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_referenced_content_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: view_mode_selector
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text_alignment:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

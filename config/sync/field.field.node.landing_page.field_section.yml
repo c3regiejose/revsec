@@ -7,12 +7,14 @@ dependencies:
     - node.type.landing_page
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.block
-    - paragraphs.paragraphs_type.experience_signature
+    - paragraphs.paragraphs_type.highlight_cards
+    - paragraphs.paragraphs_type.icon_cards
     - paragraphs.paragraphs_type.image_and_text
     - paragraphs.paragraphs_type.information_block
     - paragraphs.paragraphs_type.promotions
     - paragraphs.paragraphs_type.tabs_content_by_reference
     - paragraphs.paragraphs_type.tabs_content_by_view
+    - paragraphs.paragraphs_type.testimonial_cards
   module:
     - entity_reference_revisions
 id: node.landing_page.field_section
@@ -33,10 +35,12 @@ settings:
       promotions: promotions
       accordion: accordion
       block: block
-      experience_signature: experience_signature
       image_and_text: image_and_text
       tabs_content_by_reference: tabs_content_by_reference
+      highlight_cards: highlight_cards
+      icon_cards: icon_cards
       tabs_content_by_view: tabs_content_by_view
+      testimonial_cards: testimonial_cards
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -54,8 +58,17 @@ settings:
       block_views:
         weight: 17
         enabled: false
-      experience_signature:
-        weight: 13
+      highlight_card_item:
+        weight: 19
+        enabled: false
+      highlight_cards:
+        weight: 25
+        enabled: true
+      icon_card_item:
+        weight: 26
+        enabled: false
+      icon_cards:
+        weight: 27
         enabled: true
       image_and_text:
         weight: 14
@@ -84,4 +97,10 @@ settings:
       tabs_content_by_view_items:
         weight: 15
         enabled: false
+      testimonial_card_item:
+        weight: 39
+        enabled: false
+      testimonial_cards:
+        weight: 40
+        enabled: true
 field_type: entity_reference_revisions

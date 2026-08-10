@@ -1,0 +1,19 @@
+uuid: 28338fa9-b938-434f-9793-7dec6fdb8be8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_customer_name
+    - paragraphs.paragraphs_type.testimonial_card_item
+id: paragraph.testimonial_card_item.field_customer_name
+field_name: field_customer_name
+entity_type: paragraph
+bundle: testimonial_card_item
+label: 'Customer/Event Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,32 @@
+uuid: 628e7800-ef17-4849-81a2-a75f81692f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlight_card_item.field_content
+    - field.field.paragraph.highlight_card_item.field_title
+    - paragraphs.paragraphs_type.highlight_card_item
+  module:
+    - text
+id: paragraph.highlight_card_item.default
+targetEntityType: paragraph
+bundle: highlight_card_item
+mode: default
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

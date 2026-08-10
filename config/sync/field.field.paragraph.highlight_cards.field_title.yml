@@ -1,0 +1,19 @@
+uuid: 6c27ee53-3264-4d5b-a2f6-1308ab8786d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.highlight_cards
+id: paragraph.highlight_cards.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: highlight_cards
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

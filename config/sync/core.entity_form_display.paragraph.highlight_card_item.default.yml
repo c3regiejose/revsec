@@ -1,0 +1,34 @@
+uuid: 519fcc25-f20c-4d87-a34c-2aa029c51bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlight_card_item.field_content
+    - field.field.paragraph.highlight_card_item.field_title
+    - paragraphs.paragraphs_type.highlight_card_item
+  module:
+    - text
+id: paragraph.highlight_card_item.default
+targetEntityType: paragraph
+bundle: highlight_card_item
+mode: default
+content:
+  field_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

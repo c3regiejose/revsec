@@ -1,0 +1,10 @@
+uuid: 77eaf55e-2b36-4e83-b6ef-6a0479f98be8
+langcode: en
+status: true
+dependencies: {  }
+id: icon_cards
+label: 'Icon Cards'
+icon_uuid: null
+icon_default: null
+description: 'Displays a collection of cards that combine an icon with supporting content. This component is ideal for presenting features, benefits, services, amenities, or key highlights in a visually engaging and easy-to-scan layout.'
+behavior_plugins: {  }

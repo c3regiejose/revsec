@@ -1,0 +1,59 @@
+uuid: 81d810ed-d740-4dc3-b0b1-fc5e9dde1238
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonial_card_item.field_content
+    - field.field.paragraph.testimonial_card_item.field_customer_name
+    - field.field.paragraph.testimonial_card_item.field_date
+    - field.field.paragraph.testimonial_card_item.field_rating
+    - field.field.paragraph.testimonial_card_item.field_title
+    - paragraphs.paragraphs_type.testimonial_card_item
+  module:
+    - datetime
+    - text
+id: paragraph.testimonial_card_item.default
+targetEntityType: paragraph
+bundle: testimonial_card_item
+mode: default
+content:
+  field_content:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_customer_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_rating:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

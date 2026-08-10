@@ -1,0 +1,73 @@
+uuid: 8827e203-d741-4970-91ed-d8c338fd16e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.highlight_cards.field_content
+    - field.field.paragraph.highlight_cards.field_referenced_content_items
+    - field.field.paragraph.highlight_cards.field_text_alignment
+    - field.field.paragraph.highlight_cards.field_title
+    - paragraphs.paragraphs_type.highlight_cards
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_formatter_range
+    - options
+id: paragraph.highlight_cards.card
+targetEntityType: paragraph
+bundle: highlight_cards
+mode: card
+content:
+  field_referenced_content_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: card
+      link: ''
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 5
+    region: content
+  field_text_alignment:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_content: true
+  field_title: true

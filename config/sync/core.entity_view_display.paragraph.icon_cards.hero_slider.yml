@@ -1,18 +1,19 @@
-uuid: bdcba1e3-691c-49d9-9517-3fe2d1c812c8
+uuid: 6de24e19-0ede-48ca-b729-5ec90821fda9
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_slider
-    - field.field.paragraph.experience_signature.field_content
-    - field.field.paragraph.experience_signature.field_svg
-    - field.field.paragraph.experience_signature.field_title
-    - paragraphs.paragraphs_type.experience_signature
+    - field.field.paragraph.icon_cards.field_content
+    - field.field.paragraph.icon_cards.field_referenced_content_items
+    - field.field.paragraph.icon_cards.field_text_alignment
+    - field.field.paragraph.icon_cards.field_title
+    - paragraphs.paragraphs_type.icon_cards
   module:
     - text
-id: paragraph.experience_signature.hero_slider
+id: paragraph.icon_cards.hero_slider
 targetEntityType: paragraph
-bundle: experience_signature
+bundle: icon_cards
 mode: hero_slider
 content:
   field_content:
@@ -32,4 +33,5 @@ content:
     weight: 1
     region: ds_content
 hidden:
-  field_svg: true
+  field_referenced_content_items: true
+  field_text_alignment: true

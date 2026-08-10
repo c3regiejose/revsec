@@ -1,0 +1,35 @@
+uuid: 18da203c-d39f-4c07-a5de-a02a8db2d44b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.icon_card_item.field_content
+    - field.field.paragraph.icon_card_item.field_svg_icon
+    - field.field.paragraph.icon_card_item.field_title
+    - paragraphs.paragraphs_type.icon_card_item
+  module:
+    - text
+id: paragraph.icon_card_item.hero_slider
+targetEntityType: paragraph
+bundle: icon_card_item
+mode: hero_slider
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+hidden:
+  field_svg_icon: true

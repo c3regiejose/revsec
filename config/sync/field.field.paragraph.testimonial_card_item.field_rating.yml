@@ -1,0 +1,23 @@
+uuid: fae6a484-214f-4255-a492-aa1bb507b663
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rating
+    - paragraphs.paragraphs_type.testimonial_card_item
+id: paragraph.testimonial_card_item.field_rating
+field_name: field_rating
+entity_type: paragraph
+bundle: testimonial_card_item
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1.0
+  max: 5.0
+  prefix: ''
+  suffix: ''
+field_type: decimal

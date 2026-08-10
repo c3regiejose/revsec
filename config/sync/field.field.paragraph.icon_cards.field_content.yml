@@ -1,0 +1,22 @@
+uuid: c56fe492-25b7-497b-a190-b253ceb6a4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.icon_cards
+  module:
+    - text
+id: paragraph.icon_cards.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: icon_cards
+label: Blurb
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,17 +1,17 @@
-uuid: ed1d585c-ec06-4fb4-8b46-ffe3d7a5cdce
+uuid: dc4a86ee-d55f-40bd-971e-0ecb408f837e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.experience_signature.field_content
-    - field.field.paragraph.experience_signature.field_svg
-    - field.field.paragraph.experience_signature.field_title
-    - paragraphs.paragraphs_type.experience_signature
+    - field.field.paragraph.icon_card_item.field_content
+    - field.field.paragraph.icon_card_item.field_svg_icon
+    - field.field.paragraph.icon_card_item.field_title
+    - paragraphs.paragraphs_type.icon_card_item
   module:
     - text
-id: paragraph.experience_signature.default
+id: paragraph.icon_card_item.default
 targetEntityType: paragraph
-bundle: experience_signature
+bundle: icon_card_item
 mode: default
 content:
   field_content:
@@ -22,17 +22,17 @@ content:
       rows: 3
       placeholder: ''
     third_party_settings: {  }
-  field_svg:
+  field_svg_icon:
     type: string_textarea
-    weight: 1
+    weight: 3
     region: content
     settings:
-      rows: 2
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60

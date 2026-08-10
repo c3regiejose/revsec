@@ -1,0 +1,82 @@
+uuid: f3ff191b-8051-4c0c-84fc-cb70fa531091
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_referenced_content_items
+    - paragraphs.paragraphs_type.icon_card_item
+    - paragraphs.paragraphs_type.icon_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.icon_cards.field_referenced_content_items
+field_name: field_referenced_content_items
+entity_type: paragraph
+bundle: icon_cards
+label: 'Referenced Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      icon_card_item: icon_card_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      accordion_items:
+        weight: 16
+        enabled: false
+      banner:
+        weight: 11
+        enabled: false
+      block:
+        weight: 12
+        enabled: false
+      block_views:
+        weight: 20
+        enabled: false
+      highlight_card_item:
+        weight: 19
+        enabled: false
+      highlight_cards:
+        weight: 25
+        enabled: false
+      icon_card_item:
+        weight: 26
+        enabled: true
+      icon_cards:
+        weight: 27
+        enabled: false
+      image_and_text:
+        weight: 22
+        enabled: false
+      information_block:
+        weight: 14
+        enabled: false
+      main_banner:
+        weight: 15
+        enabled: false
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 9
+        enabled: false
+      tabs_content_by_reference:
+        weight: 27
+        enabled: false
+      tabs_content_by_reference_items:
+        weight: 28
+        enabled: false
+      tabs_content_by_view:
+        weight: 29
+        enabled: false
+      tabs_content_by_view_items:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

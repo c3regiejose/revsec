@@ -1,0 +1,10 @@
+uuid: ad31b48d-ac0d-4346-9c1e-52cadc10d74c
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial_cards
+label: 'Testimonial Cards'
+icon_uuid: null
+icon_default: null
+description: 'A reusable paragraph component that displays a collection of customer testimonials or reviews in a responsive card layout. This component acts as a container for one or more Testimonial Card Item paragraphs, allowing content editors to showcase customer feedback, ratings, and experiences in a consistent and visually engaging format.'
+behavior_plugins: {  }

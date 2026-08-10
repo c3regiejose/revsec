@@ -1,0 +1,23 @@
+uuid: 95f4f32c-32f8-41d1-b246-0d93b917ac29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_alignment
+    - paragraphs.paragraphs_type.testimonial_cards
+  module:
+    - options
+id: paragraph.testimonial_cards.field_text_alignment
+field_name: field_text_alignment
+entity_type: paragraph
+bundle: testimonial_cards
+label: 'Text Alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

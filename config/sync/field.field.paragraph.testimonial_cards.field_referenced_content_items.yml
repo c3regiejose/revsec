@@ -1,0 +1,88 @@
+uuid: 3fd4d167-f3a7-4c2d-a0f5-a0907cdc1ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_referenced_content_items
+    - paragraphs.paragraphs_type.testimonial_card_item
+    - paragraphs.paragraphs_type.testimonial_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.testimonial_cards.field_referenced_content_items
+field_name: field_referenced_content_items
+entity_type: paragraph
+bundle: testimonial_cards
+label: 'Referenced Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      testimonial_card_item: testimonial_card_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      accordion_items:
+        weight: 16
+        enabled: false
+      banner:
+        weight: 11
+        enabled: false
+      block:
+        weight: 12
+        enabled: false
+      block_views:
+        weight: 20
+        enabled: false
+      highlight_card_item:
+        weight: 27
+        enabled: false
+      highlight_cards:
+        weight: 26
+        enabled: false
+      icon_card_item:
+        weight: 29
+        enabled: false
+      icon_cards:
+        weight: 28
+        enabled: false
+      image_and_text:
+        weight: 22
+        enabled: false
+      information_block:
+        weight: 14
+        enabled: false
+      main_banner:
+        weight: 15
+        enabled: false
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 9
+        enabled: false
+      tabs_content_by_reference:
+        weight: 27
+        enabled: false
+      tabs_content_by_reference_items:
+        weight: 28
+        enabled: false
+      tabs_content_by_view:
+        weight: 29
+        enabled: false
+      tabs_content_by_view_items:
+        weight: 30
+        enabled: false
+      testimonial_card_item:
+        weight: 40
+        enabled: true
+      testimonial_cards:
+        weight: 39
+        enabled: false
+field_type: entity_reference_revisions

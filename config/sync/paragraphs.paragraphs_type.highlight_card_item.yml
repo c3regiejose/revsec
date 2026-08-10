@@ -1,0 +1,10 @@
+uuid: 4fbfe69e-3047-4700-9729-960f9e0cb8ca
+langcode: en
+status: true
+dependencies: {  }
+id: highlight_card_item
+label: 'Highlight Card Item'
+icon_uuid: null
+icon_default: null
+description: 'Represents an individual card within the Highlight Cards component. Each item includes a title, description, and an optional call to action to present featured content in a clear and engaging format.'
+behavior_plugins: {  }

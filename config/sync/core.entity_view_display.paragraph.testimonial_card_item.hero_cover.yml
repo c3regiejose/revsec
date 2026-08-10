@@ -1,0 +1,39 @@
+uuid: 2cfafcdd-8315-4a96-8b91-1ab6809a22a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.testimonial_card_item.field_content
+    - field.field.paragraph.testimonial_card_item.field_customer_name
+    - field.field.paragraph.testimonial_card_item.field_date
+    - field.field.paragraph.testimonial_card_item.field_rating
+    - field.field.paragraph.testimonial_card_item.field_title
+    - paragraphs.paragraphs_type.testimonial_card_item
+  module:
+    - text
+id: paragraph.testimonial_card_item.hero_cover
+targetEntityType: paragraph
+bundle: testimonial_card_item
+mode: hero_cover
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_customer_name: true
+  field_date: true
+  field_rating: true

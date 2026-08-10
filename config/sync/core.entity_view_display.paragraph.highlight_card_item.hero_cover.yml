@@ -1,18 +1,17 @@
-uuid: f313c5fc-1aab-48fa-8cea-39733512fa79
+uuid: aeca9149-ab12-40b0-8386-3246e66394c1
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_cover
-    - field.field.paragraph.experience_signature.field_content
-    - field.field.paragraph.experience_signature.field_svg
-    - field.field.paragraph.experience_signature.field_title
-    - paragraphs.paragraphs_type.experience_signature
+    - field.field.paragraph.highlight_card_item.field_content
+    - field.field.paragraph.highlight_card_item.field_title
+    - paragraphs.paragraphs_type.highlight_card_item
   module:
     - text
-id: paragraph.experience_signature.hero_cover
+id: paragraph.highlight_card_item.hero_cover
 targetEntityType: paragraph
-bundle: experience_signature
+bundle: highlight_card_item
 mode: hero_cover
 content:
   field_content:
@@ -31,5 +30,4 @@ content:
     third_party_settings: {  }
     weight: 0
     region: ds_content
-hidden:
-  field_svg: true
+hidden: {  }

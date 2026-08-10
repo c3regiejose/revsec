@@ -1,0 +1,37 @@
+uuid: a545c42d-2ae7-44a4-b825-17ceb8f8dea9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.highlight_cards.field_content
+    - field.field.paragraph.highlight_cards.field_referenced_content_items
+    - field.field.paragraph.highlight_cards.field_text_alignment
+    - field.field.paragraph.highlight_cards.field_title
+    - paragraphs.paragraphs_type.highlight_cards
+  module:
+    - text
+id: paragraph.highlight_cards.hero_slider
+targetEntityType: paragraph
+bundle: highlight_cards
+mode: hero_slider
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+hidden:
+  field_referenced_content_items: true
+  field_text_alignment: true

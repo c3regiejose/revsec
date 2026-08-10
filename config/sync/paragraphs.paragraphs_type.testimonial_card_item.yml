@@ -1,0 +1,10 @@
+uuid: 6ccdff8f-25c1-4fb5-bba6-a4c67eb6ddeb
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial_card_item
+label: 'Testimonial Card Item'
+icon_uuid: null
+icon_default: null
+description: 'A reusable paragraph component that represents an individual testimonial within the Testimonial Cards section. Each item can include a title, date, rating, testimonial content, and customer or event attribution, making it easy to highlight positive feedback and success stories in a structured card format.'
+behavior_plugins: {  }

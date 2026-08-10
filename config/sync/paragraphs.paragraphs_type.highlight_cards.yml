@@ -1,0 +1,10 @@
+uuid: e3381efd-eccd-4092-bdb3-64be1f5f2437
+langcode: en
+status: true
+dependencies: {  }
+id: highlight_cards
+label: 'Highlight Cards'
+icon_uuid: null
+icon_default: null
+description: 'Displays a collection of content cards designed to emphasize key information, featured content, or promotions. Each card can include a title, description, and optional call to action, making it ideal for showcasing highlights, featured items, or important messages.'
+behavior_plugins: {  }

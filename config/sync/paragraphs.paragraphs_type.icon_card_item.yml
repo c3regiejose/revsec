@@ -1,0 +1,10 @@
+uuid: 4c5f5db6-e880-46cd-86e1-7e81561d20cb
+langcode: en
+status: true
+dependencies: {  }
+id: icon_card_item
+label: 'Icon Card Item'
+icon_uuid: null
+icon_default: null
+description: 'Represents an individual card within the Icon Cards component. Each item includes an SVG icon, title, description, and an optional call to action to communicate information with a strong visual emphasis.'
+behavior_plugins: {  }
