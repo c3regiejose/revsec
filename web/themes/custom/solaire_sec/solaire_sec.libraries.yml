@@ -4,6 +4,8 @@ base:
     component:
       css/includes/_variables.css:
         weight: -10
+      css/includes/_typography.css:
+        weight: -10
       css/components/action-links.css:
         weight: -10
       css/components/breadcrumb.css:

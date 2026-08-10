@@ -1,0 +1,19 @@
+<div class="highlight-wrapper">
+  <div class="highlight-card-header {{ textAlignment }}">
+    <h2 class="highlight-card-title">{{ highlightCardsTitle }}</h2>
+    {% if highlightCardsContent is not empty %}
+      <div class="highlight-card-content">
+        {{ highlightCardsContent }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="featured-list">
+  {% for item in highlightCardsItems %}
+  <div class="featured-item">
+    <h3>{{ item.heading }}</h3>
+    <p>{{ item.content|raw }}</p>
+  </div>
+  {% endfor %}
+</div>

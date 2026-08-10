@@ -10,6 +10,7 @@ use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
 use Drupal\Core\Plugin\Context\ContextHandlerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\AccordionVariablesBuilder;
+use Drupal\solaire_sec\Hook\Preprocess\Paragraph\HighlightCardsVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\IconCardsVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TabsContentByViewVariablesBuilder;
@@ -131,6 +132,12 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     if ($paragraph->bundle() === 'testimonial_cards') {
       $builder = new TestimonialCardsVariablesBuilder($this->entityTypeManager);
       $variables = array_merge($variables, $builder->buildTestimonialCardsVariables($paragraph));
+    }
+
+    // Hightlighted Card.
+    if ($paragraph->bundle() == 'highlight_cards') {
+      $builder = new HighlightCardsVariablesBuilder($this->entityTypeManager);
+      $variables = array_merge($variables, $builder->buildHighlightCardsVariables($paragraph));
     }
 
     return $variables;

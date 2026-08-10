@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Card Highlight
+description: A reusable card highlight component.
+status: stable
+
+props:
+  type: object
+  properties:
+    highlightCardsTitle:
+      type: string
+      title: Title
+      description: The title.
+    highlightCardsContent:
+      type:
+        - string
+        - "null"
+      title: Content
+      description: The content.
+    textAlignment:
+      type: string
+      title: Text Alignment
+      description: The text alignment.
+slots:
+  highlightCardsItems:
+      type: object
+      title: Items
+      description: The items.
