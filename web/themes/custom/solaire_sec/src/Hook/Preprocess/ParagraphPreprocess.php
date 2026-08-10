@@ -13,6 +13,7 @@ use Drupal\solaire_sec\Hook\Preprocess\Paragraph\AccordionVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\IconCardsVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TabsContentByViewVariablesBuilder;
+use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TestimonialCardsVariablesBuilder;
 use Psr\Container\ContainerInterface;
 
 class ParagraphPreprocess implements ContainerInjectionInterface {
@@ -100,7 +101,7 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
 
     // Slide per view.
     if ($slides = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_slide_per_view')) {
-      $variables['slidesPerView'] = (int) $slides;
+      $variables['slidesPerView'] = ($slides === '') ? 3 : (int) $slides;
     }
 
     // Tabs Content by View.
@@ -124,6 +125,12 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     if ($paragraph->bundle() === 'icon_cards') {
       $builder = new IconCardsVariablesBuilder($this->entityTypeManager);
       $variables = array_merge($variables, $builder->buildIconCardsVariables($paragraph));
+    }
+
+    // Testimonial Cards.
+    if ($paragraph->bundle() === 'testimonial_cards') {
+      $builder = new TestimonialCardsVariablesBuilder($this->entityTypeManager);
+      $variables = array_merge($variables, $builder->buildTestimonialCardsVariables($paragraph));
     }
 
     return $variables;

@@ -44,21 +44,44 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
+    'paragraph--testimonial-cards',
     'paragraph--section'
   ]
 %}
-
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      {% set slidesPerView = 3 %}
+      {% set testimonial_items = '' %}
+
+      {% for item in testimonial_cards_items %}
+
+        {% set testimonial %}
+          {% embed 'solaire_sec:card_testimonial' with {
+            heading: item.heading,
+            date: item.date,
+            rating: item.rating,
+            quote: item.quote,
+            customer_name: item.customer_name,
+            classes: [
+              'swiper-slide',
+              'text-align-left'
+            ]
+          } %}
+          {% endembed %}
+        {% endset %}
+
+        {% set testimonial_items = testimonial_items ~ testimonial %}
+
+      {% endfor %}
 
       <div class="section-header {{ textAlignment }}">
-        <h2>{{ content.field_title }}</h2>
-        {{ content.field_content }}
+        <h2>{{ testimonial_cards_title }}</h2>
+        {{ testimonial_cards_content|raw }}
       </div>
-      
+
       {% embed 'solaire_sec:swiper' with {
-        cardItem: content.field_referenced_content_items,
+        cardItem: testimonial_items,
         slidesPerView: slidesPerView
       } %}
 
@@ -72,6 +95,7 @@
         {% endblock %}
 
       {% endembed %}
+
     {% endblock %}
   </div>
 {% endblock paragraph %}

@@ -1,0 +1,52 @@
+{# <div class="card-testimonial-wrapper">
+  <div class="card-testimonial-content {{ testimonialCardsPosition }}">
+    <h2 class="card-testimonial-title">{{ testimonialCardsTitle }}</h2>
+    <p class="card-testimonial-text">{{ testimonialCardsContent|raw }}</p>
+  </div>
+</div> #}
+
+{# <div class="card-testimonial-items">
+  {% for item in testimonialCardsItems %}
+    <div class="card-testimonial">
+      <div class="card-testimonial-header">
+        <div class="card-testimonial-info">
+          <div class="card-testimonial-subject">
+            {{ item.heading }}
+          </div>
+          <div class="card-testimonial-date">
+            {{ item.date }}
+          </div>
+        </div>
+
+        <div class="stars" data-rating="{{ item.rating }}"></div>
+      </div>
+      <div class="card-testimonial-text">
+        {{ item.quote|raw }}
+      </div>
+      <div class="card-testimonial-item-footer"> 
+        <span>{{ item.customer_name }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div> #}
+
+<div class="card-testimonial {{ classes|join(' ') }}">
+  <div class="card-testimonial-header">
+    <div class="card-testimonial-info">
+      <div class="card-testimonial-subject">
+        {{ heading }}
+      </div>
+      <div class="card-testimonial-date">
+        {{ date }}
+      </div>
+    </div>
+
+    <div class="stars" data-rating="{{ rating }}"></div>
+  </div>
+  <div class="card-testimonial-text">
+    {{ quote|raw }}
+  </div>
+  <div class="card-testimonial-item-footer"> 
+    <span>{{ customer_name }}</span>
+  </div>
+</div>

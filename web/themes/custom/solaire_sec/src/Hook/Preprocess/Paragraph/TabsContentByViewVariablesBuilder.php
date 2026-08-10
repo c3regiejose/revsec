@@ -33,10 +33,6 @@ class TabsContentByViewVariablesBuilder {
   public function buildTabsContentByViewVariables(ParagraphInterface $paragraph): array {
     $result = [];
 
-    if ($textAlignment = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_text_alignment')) {
-      $result['textAlignment'] = 'text-align-' . $textAlignment;
-    }
-
     if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
       $result['tab_content_title'] = $title;
     }

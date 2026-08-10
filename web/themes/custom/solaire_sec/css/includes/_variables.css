@@ -86,6 +86,8 @@
   --opal: #be53e2;
   --ruby: #b02525;
   --diamond: #969696;
+
+  --star: var(--secondary);
 }
 
 .theme-media {
