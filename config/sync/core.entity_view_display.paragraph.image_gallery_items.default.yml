@@ -1,0 +1,26 @@
+uuid: 01f7d0da-4a3a-4809-a433-c4a07d83308d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_gallery_items.field_mobile_banner
+    - paragraphs.paragraphs_type.image_gallery_items
+  module:
+    - image
+id: paragraph.image_gallery_items.default
+targetEntityType: paragraph
+bundle: image_gallery_items
+mode: default
+content:
+  field_mobile_banner:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

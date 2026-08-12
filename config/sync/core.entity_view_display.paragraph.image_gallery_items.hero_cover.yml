@@ -1,0 +1,15 @@
+uuid: 1930a18c-bb09-4391-82d4-315d870a6566
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.image_gallery_items.field_mobile_banner
+    - paragraphs.paragraphs_type.image_gallery_items
+id: paragraph.image_gallery_items.hero_cover
+targetEntityType: paragraph
+bundle: image_gallery_items
+mode: hero_cover
+content: {  }
+hidden:
+  field_mobile_banner: true

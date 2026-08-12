@@ -1,0 +1,39 @@
+uuid: 77e0c72c-473b-4cf9-aecb-fbd31a2f3cff
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_cover
+    - field.field.paragraph.image_gallery.field_content
+    - field.field.paragraph.image_gallery.field_referenced_content_items
+    - field.field.paragraph.image_gallery.field_slide_type
+    - field.field.paragraph.image_gallery.field_text_alignment
+    - field.field.paragraph.image_gallery.field_title
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - text
+id: paragraph.image_gallery.hero_cover
+targetEntityType: paragraph
+bundle: image_gallery
+mode: hero_cover
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+hidden:
+  field_referenced_content_items: true
+  field_slide_type: true
+  field_text_alignment: true

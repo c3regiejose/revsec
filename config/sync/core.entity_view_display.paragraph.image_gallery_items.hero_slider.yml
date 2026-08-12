@@ -1,0 +1,56 @@
+uuid: 95c74f54-33bc-4790-85e8-96f46eedc1d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_slider
+    - field.field.paragraph.image_gallery_items.field_mobile_banner
+    - paragraphs.paragraphs_type.image_gallery_items
+  module:
+    - ds
+    - image
+id: paragraph.image_gallery_items.hero_slider
+targetEntityType: paragraph
+bundle: image_gallery_items
+mode: hero_slider
+content:
+  field_mobile_banner:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: true
+            fi-el: ''
+            fi-cl: mobile-view
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: ds_content
+hidden: {  }

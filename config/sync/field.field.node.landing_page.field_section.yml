@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.highlight_cards
     - paragraphs.paragraphs_type.icon_cards
     - paragraphs.paragraphs_type.image_and_text
+    - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.information_block
     - paragraphs.paragraphs_type.promotions
     - paragraphs.paragraphs_type.tabs_content_by_reference
@@ -40,6 +41,7 @@ settings:
       highlight_cards: highlight_cards
       icon_cards: icon_cards
       tabs_content_by_view: tabs_content_by_view
+      image_gallery: image_gallery
       testimonial_cards: testimonial_cards
     negate: 0
     target_bundles_drag_drop:
@@ -73,6 +75,12 @@ settings:
       image_and_text:
         weight: 14
         enabled: true
+      image_gallery:
+        weight: 33
+        enabled: true
+      image_gallery_items:
+        weight: 34
+        enabled: false
       information_block:
         weight: 2
         enabled: true

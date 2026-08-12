@@ -1,0 +1,21 @@
+uuid: b5091c9b-4efc-4ed0-b6da-8dea740a4d34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_type
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - options
+id: paragraph.image_gallery.field_slide_type
+field_name: field_slide_type
+entity_type: paragraph
+bundle: image_gallery
+label: 'Slide Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

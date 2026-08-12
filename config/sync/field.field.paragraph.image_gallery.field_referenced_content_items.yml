@@ -1,0 +1,94 @@
+uuid: c5fbc6a5-c2a9-47c7-89cb-f594e42b14eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_referenced_content_items
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.image_gallery_items
+  module:
+    - entity_reference_revisions
+id: paragraph.image_gallery.field_referenced_content_items
+field_name: field_referenced_content_items
+entity_type: paragraph
+bundle: image_gallery
+label: 'Referenced Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_gallery_items: image_gallery_items
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      accordion_items:
+        weight: 16
+        enabled: false
+      banner:
+        weight: 11
+        enabled: false
+      block:
+        weight: 12
+        enabled: false
+      block_views:
+        weight: 20
+        enabled: false
+      highlight_card_item:
+        weight: 29
+        enabled: false
+      highlight_cards:
+        weight: 28
+        enabled: false
+      icon_card_item:
+        weight: 31
+        enabled: false
+      icon_cards:
+        weight: 30
+        enabled: false
+      image_and_text:
+        weight: 22
+        enabled: false
+      image_gallery:
+        weight: 33
+        enabled: false
+      image_gallery_items:
+        weight: 34
+        enabled: true
+      information_block:
+        weight: 14
+        enabled: false
+      main_banner:
+        weight: 15
+        enabled: false
+      promotion_items:
+        weight: 16
+        enabled: false
+      promotions:
+        weight: 9
+        enabled: false
+      tabs_content_by_reference:
+        weight: 27
+        enabled: false
+      tabs_content_by_reference_items:
+        weight: 28
+        enabled: false
+      tabs_content_by_view:
+        weight: 29
+        enabled: false
+      tabs_content_by_view_items:
+        weight: 30
+        enabled: false
+      testimonial_card_item:
+        weight: 44
+        enabled: false
+      testimonial_cards:
+        weight: 43
+        enabled: false
+field_type: entity_reference_revisions

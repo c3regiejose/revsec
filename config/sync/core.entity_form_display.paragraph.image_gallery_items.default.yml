@@ -1,0 +1,29 @@
+uuid: e370654a-ac9f-403f-88aa-9bd1a3d146dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_gallery_items.field_mobile_banner
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_gallery_items
+  module:
+    - image
+    - imce
+id: paragraph.image_gallery_items.default
+targetEntityType: paragraph
+bundle: image_gallery_items
+mode: default
+content:
+  field_mobile_banner:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      imce:
+        enabled: true
+hidden:
+  created: true
+  status: true

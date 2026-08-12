@@ -1,0 +1,42 @@
+uuid: 1692c35c-5d8f-4157-8fdc-7f6ab47c13d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card_w_category
+    - field.field.paragraph.image_gallery.field_content
+    - field.field.paragraph.image_gallery.field_referenced_content_items
+    - field.field.paragraph.image_gallery.field_slide_type
+    - field.field.paragraph.image_gallery.field_text_alignment
+    - field.field.paragraph.image_gallery.field_title
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - ds
+    - entity_reference_revisions
+id: paragraph.image_gallery.card_w_category
+targetEntityType: paragraph
+bundle: image_gallery
+mode: card_w_category
+content:
+  field_referenced_content_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: card_w_category
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 2
+    region: ds_content
+hidden:
+  field_content: true
+  field_slide_type: true
+  field_text_alignment: true
+  field_title: true

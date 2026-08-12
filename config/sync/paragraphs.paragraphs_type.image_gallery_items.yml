@@ -1,0 +1,10 @@
+uuid: b88539ed-b055-447c-aa00-56a69e184ba5
+langcode: en
+status: true
+dependencies: {  }
+id: image_gallery_items
+label: 'Image Gallery Items'
+icon_uuid: null
+icon_default: null
+description: 'Add the images that should appear in that slide.'
+behavior_plugins: {  }

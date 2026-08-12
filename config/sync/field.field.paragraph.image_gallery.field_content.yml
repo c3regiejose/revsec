@@ -1,0 +1,22 @@
+uuid: bfeca688-b17e-4bff-9d5f-9de86ed7c8f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.image_gallery
+  module:
+    - text
+id: paragraph.image_gallery.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: image_gallery
+label: Blurb
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,10 @@
+uuid: a05c67d1-1639-4c87-8420-8e5659d34e44
+langcode: en
+status: true
+dependencies: {  }
+id: image_gallery
+label: 'Image Gallery'
+icon_uuid: null
+icon_default: null
+description: 'Creates an image gallery that displays multiple slides in a carousel. Each slide can use a different layout, such as a three-column image layout or a featured/mosaic layout. Add one or more Gallery Slides to build the gallery.'
+behavior_plugins: {  }
