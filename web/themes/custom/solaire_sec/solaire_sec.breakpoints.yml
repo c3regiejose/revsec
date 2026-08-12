@@ -1,0 +1,36 @@
+# solaire.breakpoints.yml
+
+mobile:
+  label: Mobile
+  mediaQuery: '(min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+tablet:
+  label: Tablet
+  mediaQuery: '(min-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+tablet:
+  label: Tablet
+  mediaQuery: '(min-width: 1024px)'
+  weight: 2
+  multipliers:
+    - 1x
+
+spepcial:
+  label: Special
+  mediaQuery: '(min-width: 1200px)'
+  weight: 2
+  multipliers:
+    - 1x
+
+wide:
+  label: Wide
+  mediaQuery: '(min-width: 1560px)'
+  weight: 2
+  multipliers:
+    - 1x

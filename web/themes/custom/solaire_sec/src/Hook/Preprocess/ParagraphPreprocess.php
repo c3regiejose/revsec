@@ -12,7 +12,10 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\AccordionVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\HighlightCardsVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\IconCardsVariablesBuilder;
+use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ImageGalleryVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\File\FileUrlGeneratorInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TabsContentByViewVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\TestimonialCardsVariablesBuilder;
 use Psr\Container\ContainerInterface;
@@ -45,6 +48,8 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
   protected EntityTypeManagerInterface $entityTypeManager;
+  protected FileSystemInterface $fileSystem;
+  protected FileUrlGeneratorInterface $fileUrlGenerator;
 
   /**
    * ParagraphPreprocess constructor.
@@ -53,12 +58,16 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     BlockManagerInterface $block_manager,
     ContextRepositoryInterface $context_repository,
     ContextHandlerInterface $context_handler,
-    EntityTypeManagerInterface $entity_type_manager
+    EntityTypeManagerInterface $entity_type_manager,
+    FileSystemInterface $file_system,
+    FileUrlGeneratorInterface $file_url_generator
   ) {
     $this->blockManager = $block_manager;
     $this->contextRepository = $context_repository;
     $this->contextHandler = $context_handler;
     $this->entityTypeManager = $entity_type_manager;
+    $this->fileSystem = $file_system;
+    $this->fileUrlGenerator = $file_url_generator;
   }
 
   /**
@@ -69,7 +78,9 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
       $container->get('plugin.manager.block'),
       $container->get('context.repository'),
       $container->get('context.handler'),
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('file_system'),
+      $container->get('file_url_generator')
     );
   }
 
@@ -138,6 +149,16 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     if ($paragraph->bundle() == 'highlight_cards') {
       $builder = new HighlightCardsVariablesBuilder($this->entityTypeManager);
       $variables = array_merge($variables, $builder->buildHighlightCardsVariables($paragraph));
+    }
+
+    // Image Gallery.
+    if ($paragraph->bundle() === 'image_gallery') {
+      $builder = new ImageGalleryVariablesBuilder(
+        $this->entityTypeManager, 
+        $this->fileSystem, 
+        $this->fileUrlGenerator
+      );
+      $variables = array_merge($variables, $builder->buildImageGalleryVariables($paragraph));
     }
 
     return $variables;

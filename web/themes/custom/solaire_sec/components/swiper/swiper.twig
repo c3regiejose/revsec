@@ -1,7 +1,11 @@
 {% set slides = slidesPerView ?? 3 %}
 
 <!-- Slider main container -->
-<div class="swiper main-swiper" data-slidePerView="{{ slides }}">
+<div 
+  class="swiper main-swiper {{ classes|join(' ') }}" 
+  data-slidePerView="{{ slides }}" 
+  {% if options is not empty %} data-swiperOptions={{ options }} {% endif %}
+>
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     {{ cardItem|raw }}

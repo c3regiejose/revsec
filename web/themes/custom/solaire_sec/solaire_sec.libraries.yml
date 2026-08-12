@@ -50,6 +50,10 @@ base:
         weight: -10
       css/style.css:
         weight: -10
+  js:
+    js/utilities/breakpoint.js: { }
+    js/utilities/debounce.js: { }
+    js/utilities/element.js: { }
 dialog:
   version: VERSION
   css:
