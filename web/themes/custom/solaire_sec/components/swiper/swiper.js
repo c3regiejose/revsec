@@ -83,10 +83,6 @@
   Drupal.behaviors.mainSwiper = {
     attach(context) {
 
-      once('swiper-item', '.main-swiper article', context).forEach((element) =>{
-        element.classList = 'swiper-slide';
-      });
-
       once('slider', '.main-swiper', context).forEach((element) => {
         if (element.hasClass('featured_mosaic')) {
           // Handble Resize.

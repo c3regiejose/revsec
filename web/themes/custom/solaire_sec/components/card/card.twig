@@ -1,10 +1,4 @@
-{% set classes = [
-  'card',
-  'card--' ~ variant,
-  modifier ? modifier : '',
-] %}
-
-<article{{ attributes.addClass(classes) }}>
+<div class="card card--{{ variant}} {{ customClass }}">
 
   {% if card.image %}
     <div class="card__image">
@@ -40,4 +34,4 @@
 
   </div>
 
-</article>
+</div>

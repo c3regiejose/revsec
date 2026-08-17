@@ -40,6 +40,10 @@ props:
       type: string
       title: Additional CSS classes
       default: ""
+    customClass:
+      type: string
+      title: Additional CSS classes
+      default: ""
 
 slots:
   image:
