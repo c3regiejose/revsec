@@ -15,6 +15,13 @@ class HtmlPreprocess{
    */
   #[Hook('preprocess_html')]
   public function preprocessHtml(array &$variables): void {
-    $variables['dataTheme'] = 'light';
+    $variables['dataTheme'] = $this->getTheme();
+  }
+
+  /**
+   * Get theme from cookie.
+   */
+  public function getTheme() {
+    return 'light';
   }
 }
