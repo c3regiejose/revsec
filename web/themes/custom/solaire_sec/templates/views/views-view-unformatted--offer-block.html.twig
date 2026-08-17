@@ -15,25 +15,11 @@
    * @see template_preprocess_views_view_unformatted()
    */
   #}
-
 {% set contents = [] %}
 {% for row in rows %}
   {% set contents = contents|merge([row.content]) %}
 {% endfor %}
 
-{% embed 'solaire_sec:swiper' with {
-  cardItem: contents,
-  slidesPerView: 3
-} %}
+{{ contents }}
 
-  {% block pagination %}
-  {% endblock %}
-
-  {# {% block navigation %}
-  {% endblock %} #}
-
-  {% block scrollbar %}
-  {% endblock %}
-
-{% endembed %}
   

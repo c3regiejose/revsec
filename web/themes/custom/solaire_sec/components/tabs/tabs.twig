@@ -9,22 +9,34 @@
   
 
   <ul class="tabs" role="tablist">
+    <li>
+      <button 
+        class="tab-btn active"
+        role="tab" 
+        aria-selected="" 
+        data-tab="All">
+          {{ "All" }}
+      </button>
+    </li>
     {% for tab in tabItem %}
-      <li>
-        <button 
-          class="tab-btn{{ loop.first ? ' active' : '' }}" 
-          role="tab" 
-          aria-selected="{{ loop.first ? 'true' : 'false' }}" 
-          data-tab="{{ tab.heading_slug }}">
-            {{ tab.heading }}
-        </button>
-      </li>
+      {% if tab.views_block %}
+        <li>
+          <button 
+            class="tab-btn" 
+            role="tab" 
+            {# aria-selected="{{ loop.first ? 'true' : 'false' }}"  #}
+            aria-selected="false" 
+            data-tab="{{ tab.heading_slug }}">
+              {{ tab.heading }}
+          </button>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 
   {% for tab in tabItem %}
-    <div class="panel{{ loop.first ? ' active' : '' }}" id="{{ tab.heading_slug }}">
-      <p>{{ tab.views_block }}</p>
+    <div class="panel active" id="{{ tab.heading_slug }}">
+      {{ tab.views_block }}
     </div>
   {% endfor %}
   </div>

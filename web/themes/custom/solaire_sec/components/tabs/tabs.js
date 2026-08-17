@@ -11,14 +11,21 @@
               btn.classList.remove('active');
               btn.setAttribute('aria-selected', 'false');
             });
-            panels.forEach((panel) => panel.classList.remove('active'));
 
-            button.classList.add('active');
-            button.setAttribute('aria-selected', 'true');
+            if (button.getAttribute('data-tab') == 'All') {
+              panels.forEach((panel) => panel.classList.add('active'));
+              button.classList.add('active');
+              button.setAttribute('aria-selected', 'true');
+            } else {
+              panels.forEach((panel) => panel.classList.remove('active'));
 
-            const panel = tabsComponent.querySelector('#' + CSS.escape(button.dataset.tab));
-            if (panel) {
-              panel.classList.add('active');
+              button.classList.add('active');
+              button.setAttribute('aria-selected', 'true');
+
+              const panel = tabsComponent.querySelector('#' + CSS.escape(button.dataset.tab));
+              if (panel) {
+                panel.classList.add('active');
+              }
             }
           });
         });

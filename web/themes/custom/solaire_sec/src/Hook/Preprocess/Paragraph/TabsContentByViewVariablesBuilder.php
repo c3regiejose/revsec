@@ -8,6 +8,7 @@ use Drupal\Core\Plugin\Context\ContextHandlerInterface;
 use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
+use Drupal\views\ViewExecutable;
 
 class TabsContentByViewVariablesBuilder {
   protected BlockManagerInterface $blockManager;
@@ -73,7 +74,12 @@ class TabsContentByViewVariablesBuilder {
             $this->contextRepository,
             $this->contextHandler
           );
-          $result['tab_content_items'][$parItem->id()]['views_block'] = $items;
+
+          $view = $items['content']['#view'] ?? NULL;
+          // Add a validation if views is empty.
+          if ($view instanceof ViewExecutable && $view->total_rows > 0) {
+            $result['tab_content_items'][$parItem->id()]['views_block'] = $items;  
+          }
         }
       }
     }
