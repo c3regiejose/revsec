@@ -38,6 +38,8 @@ class BannerVariablesBuilder {
       $nodes = $this->getAllBannerFeaturedInFrontPage();
       $pageBanner['page_banner'] = $this->getBannersItems($nodes);
     } else {
+      $nodes[$node->id()] = $node;
+      $pageBanner['page_banner'] = $this->getBannersItems($nodes);
     }
 
 		return $pageBanner;
