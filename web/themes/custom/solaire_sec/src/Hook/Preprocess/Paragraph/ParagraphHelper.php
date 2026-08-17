@@ -8,6 +8,7 @@ use Drupal\Core\Plugin\Context\ContextAwarePluginInterface;
 use Drupal\Core\Plugin\Context\ContextHandlerInterface;
 use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
 use Drupal\paragraphs\ParagraphInterface;
+use Drupal\Core\File\FileUrlGeneratorInterface;
 
 class ParagraphHelper {
   /**
@@ -26,6 +27,27 @@ class ParagraphHelper {
       return $paragraph->get($fieldName)->value;
     }
     return '';
+  }
+
+  /**
+   * Returns the raw string value of a paragraph field, or NULL if missing.
+   *
+   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   *   The paragraph entity.
+   * @param string $fieldName
+   *   The field machine name.
+   *
+   * @return string|null
+   *   The field value or NULL when the field is absent or empty.
+   */
+  public static function getParagraphReferenceFieldValue(ParagraphInterface $paragraph, string $fieldName): ?array {
+    if ($paragraph->hasField($fieldName) && !$paragraph->get($fieldName)->isEmpty()) {
+      return array_column(
+        $paragraph->get($fieldName)->getValue(),
+        'target_id'
+      );
+    }
+    return [];
   }
 
   /**
@@ -156,5 +178,51 @@ class ParagraphHelper {
       '#derivative_plugin_id' => $plugin_block->getDerivativeId(),
       'content' => $build,
     ];
+  }
+
+  /**
+   * Build an image gallery item from a paragraph.
+   *
+   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   *   The paragraph containing image fields.
+   * @param \Drupal\Core\File\FileUrlGeneratorInterface $file_url_generator
+   *   The file URL generator service.
+   *
+   * @return array
+   *   An associative array with image data, or an empty array when none found.
+   */
+  public static function buildImageItem(
+    ParagraphInterface $paragraph, 
+    FileUrlGeneratorInterface $file_url_generator,
+    $field_name
+  ): array {
+    $item = [];
+
+    if (!($paragraph->hasField($field_name) && !$paragraph->get($field_name)->isEmpty())) {
+      return [];
+    }
+
+    $entity = $paragraph->get($field_name)->entity ?? NULL;
+    $uri = NULL;
+
+    if ($entity) {
+      if ($entity instanceof \Drupal\file\Entity\File) {
+        $uri = $file_url_generator->generateAbsoluteString($entity->getFileUri());
+      }
+    }
+
+    if ($uri) {
+      if (function_exists('file_create_url')) {
+        $item['image_url'] = file_create_url($uri);
+      }
+      else {
+        $item['image_uri'] = $uri;
+      }
+    }
+
+    $item['image_alt'] = $paragraph->get($field_name)->alt ?? '';
+    $item['id'] = $entity->id();
+
+    return $item;
   }
 }

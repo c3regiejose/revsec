@@ -6,6 +6,8 @@ base:
         weight: -10
       css/includes/_typography.css:
         weight: -10
+      css/includes/_layout.css:
+        weight: -10
       css/components/action-links.css:
         weight: -10
       css/components/breadcrumb.css:
@@ -49,7 +51,7 @@ base:
       css/helper.css:
         weight: -10
       css/style.css:
-        weight: -10
+        weight: 1
   js:
     js/utilities/breakpoint.js: { }
     js/utilities/debounce.js: { }

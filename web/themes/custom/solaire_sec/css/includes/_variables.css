@@ -88,6 +88,11 @@
   --diamond: #969696;
 
   --star: var(--secondary);
+
+  --max-width: 1550px;
+  @media (min-width: 1024px) {
+    --grid-col-count: 14;
+  }
 }
 
 .theme-media {

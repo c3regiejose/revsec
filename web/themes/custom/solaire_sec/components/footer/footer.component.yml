@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Card Icon
+description: A reusable card icon component.
+status: stable
+
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The title.
+
+slots:
+  footerTopLeft:
+    title: Footer Top Left
+    description: A list of footer top items.
+  footerTopRight:
+    title: Footer Top right
+    description: A list of footer top items.
+  footerBottom:
+    title: Footer Bottom
+    description: A list of footer bottom items.

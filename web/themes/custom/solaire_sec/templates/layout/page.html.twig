@@ -60,6 +60,17 @@
   <main>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
+    {% if not hide_banner %}
+      {% if page_banner is not empty %}
+        <div class="page-banner hero-parallax">
+          {% embed 'solaire_sec:hero_banner' with {
+            bannerItems: page_banner
+          } %}
+          {% endembed %}
+        </div>
+      {% endif %}
+    {% endif %}
+
     <div class="layout-content">
       {{ page.content }}
     </div>{# /.layout-content #}
@@ -78,10 +89,11 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer>
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  {% embed 'solaire_sec:footer' with {
+    footerTopLeft: page.footer_top_left,
+    footerTopRight: page.footer_top_right,
+    footerBottom: page.footer_bottom
+  } %}
+  {% endembed %}
 
 </div>{# /.layout-container #}

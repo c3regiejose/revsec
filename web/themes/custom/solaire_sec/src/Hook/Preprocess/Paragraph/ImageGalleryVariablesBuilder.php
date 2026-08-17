@@ -59,7 +59,7 @@ class ImageGalleryVariablesBuilder {
       $paragraphs = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $ids);
 
       foreach ($paragraphs as $parItem) {
-        $item = $this->buildImageGalleryItem($parItem);
+        $item = ParagraphHelper::buildImageItem($parItem, $this->fileUrlGenerator, 'field_mobile_banner');
         if (!empty($item)) {
           $result['image_gallery_items'][] = $item;
         }
@@ -67,43 +67,5 @@ class ImageGalleryVariablesBuilder {
     }
 
     return $result;
-  }
-
-  protected function buildImageGalleryItem(ParagraphInterface $paragraph): array {
-    $item = [];
-
-    $image_fields = ['field_mobile_banner', 'field_image', 'field_banner', 'field_media_image'];
-    foreach ($image_fields as $field_name) {
-      if (!($paragraph->hasField($field_name) && !$paragraph->get($field_name)->isEmpty())) {
-        continue;
-      }
-
-      $entity = $paragraph->get($field_name)->entity ?? NULL;
-      $uri = NULL;
-
-      
-
-      if ($entity) {
-        
-        if ($entity instanceof \Drupal\file\Entity\File) {
-          $uri = $this->fileUrlGenerator->generateAbsoluteString($entity->getFileUri());
-        }
-      }
-
-      if ($uri) {
-        if (function_exists('file_create_url')) {
-          $item['image_url'] = file_create_url($uri);
-        }
-        else {
-          $item['image_uri'] = $uri;
-        }
-      }
-
-      $item['image_alt'] = $paragraph->get($field_name)->alt ?? '';
-
-      break;
-    }
-
-    return $item;
   }
 }

@@ -3,6 +3,13 @@
   transition: background-color 250ms var(--ease);
 }
 
+/* .container {
+  max-width: var(--max-width);
+  inline-size: 100%;
+  max-inline-size: var(--max-width);
+  margin-inline: auto;
+} */
+
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -45,4 +52,8 @@ video {
 
 .paragraph--section {
   margin: 1rem;
+}
+
+.text-content {
+  font-family: var(--text-sans);
 }

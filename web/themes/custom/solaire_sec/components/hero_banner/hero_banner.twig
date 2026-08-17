@@ -1,0 +1,47 @@
+{% set banner_items = '' %}
+
+{% for item in bannerItems %}
+  {% set banner %}
+    <div class="swiper-slide">
+      <div class="main-banner-content">
+        <div class="img-container">
+
+          {% if item.field_image is not empty %}
+            <img
+              class="banner-image banner-image--desktop"
+              src="{{ item.field_image.image_uri }}"
+              alt="{{ item.field_image.image_alt }}"
+              title="{{ item.field_image.image_alt }}">
+          {% endif %}
+
+          {# {% if item.field_mobile_banner is not empty %}
+            <img
+              class="banner-image banner-image--desktop"
+              src="{{ item.field_mobile_banner.image_uri }}"
+              alt="{{ item.field_mobile_banner.image_alt }}"
+              title="{{ item.field_mobile_banner.image_alt }}">
+          {% endif %} #}
+        </div>
+      </div>
+    </div>
+  {% endset %}
+
+  {% set banner_items = banner_items ~ banner %}
+{% endfor %}
+
+{# <Swiper> #}
+{% embed 'solaire_sec:swiper_banner_slider' with {
+  cardItem: banner_items
+} %}
+
+  {% block pagination %}
+  {% endblock %}
+
+  {# {% block navigation %}
+  {% endblock %} #}
+
+  {% block scrollbar %}
+  {% endblock %}
+
+{% endembed %}
+{# </Swiper> #}

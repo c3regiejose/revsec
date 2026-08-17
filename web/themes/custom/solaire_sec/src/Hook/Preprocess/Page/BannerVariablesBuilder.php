@@ -1,0 +1,141 @@
+<?php
+
+namespace Drupal\solaire_sec\Hook\Preprocess\Page;
+
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\File\FileUrlGeneratorInterface;
+use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
+use Drupal\node\NodeInterface;
+
+class BannerVariablesBuilder {
+
+	protected EntityTypeManagerInterface $entityTypeManager;
+	protected FileSystemInterface $fileSystem;
+	protected FileUrlGeneratorInterface $fileUrlGenerator;
+	protected $isFront;
+
+	public function __construct(
+		EntityTypeManagerInterface $entity_type_manager,
+		FileSystemInterface $file_system,
+		FileUrlGeneratorInterface $file_url_generator,
+		$is_front
+	) {
+		$this->entityTypeManager = $entity_type_manager;
+		$this->fileSystem = $file_system;
+		$this->fileUrlGenerator = $file_url_generator;
+		$this->isFront = $is_front;
+	}
+
+	/**
+	 * Build banner variables from a node.
+	 */
+	public function buildBannerVariables(NodeInterface $node): array {
+
+    $pageBanner = [];
+
+    if ($this->isFront) {
+      $nodes = $this->getAllBannerFeaturedInFrontPage();
+      $pageBanner['page_banner'] = $this->getBannersItems($nodes);
+    } else {
+    }
+
+		return $pageBanner;
+	}
+
+  /**
+   * 
+   */
+  public function getBannersItems($nodes) {
+    $bannerCollectionItems = [];
+
+    foreach ($nodes as $node) {
+      if ($node->hasField('field_banner') &&
+        !$node->get('field_banner')->isEmpty()
+      ) {
+        $ids = array_column(
+          $node->get('field_banner')->getValue(),
+          'target_id'
+        );
+
+        $paragraphs = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $ids);
+        foreach ($paragraphs as $paragraph) {
+          if ($paragraph->hasField('field_banner_items') &&
+            !$paragraph->get('field_banner_items')->isEmpty()
+          ) {
+            $parIds = array_column(
+              $paragraph->get('field_banner_items')->getValue(),
+              'target_id'
+            );
+
+            // Load paragraph banner items
+            $bannerCollectionItems[$paragraph->id()] = $this->loadParagrapgBannersItem($parIds);
+          }
+        }
+      }
+    }
+
+    return $this->processBanner($bannerCollectionItems);
+  }
+
+  /**
+   * Process banner.
+   */
+  public function processBanner($bannerCollections) {
+    $result = [];
+
+    if ($bannerCollections) {
+      foreach ($bannerCollections as $banners) {
+        foreach ($banners as $key => $banner) {
+          $result[$key] = $banner;
+        }
+      }
+    }
+
+    return $result;
+  }
+
+  /**
+   * Load paragraph banners
+   */
+  public function loadParagrapgBannersItem($parIds) {
+    $bannerLists = [];
+    $bannerItems = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $parIds);
+
+    foreach ($bannerItems as $banner) {
+      $desktopBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_image');
+      if (!empty($desktopBanner)) {
+        $bannerLists[$banner->id()]['field_image'] = $desktopBanner;
+      }
+
+      $mobileBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_mobile_banner');
+      if (!empty($mobileBanner)) {
+        $bannerLists[$banner->id()]['field_mobile_banner'] = $mobileBanner;
+      }
+    }
+
+    return $bannerLists;
+  }
+
+  /**
+   * Get all Featured Banner.
+   */
+  private function getAllBannerFeaturedInFrontPage() {
+		// Return an array of node entities that have the
+		// `field_featured_on_frontpage_bann` field set to true.
+		$storage = $this->entityTypeManager->getStorage('node');
+
+		$query = $storage->getQuery()
+			->condition('status', 1)
+			->condition('field_featured_on_frontpage_bann', 1)
+      ->accessCheck(FALSE)
+			->sort('created', 'DESC');
+
+		$nids = $query->execute();
+		if (empty($nids)) {
+			return [];
+		}
+
+		return $storage->loadMultiple($nids);
+  }
+}
