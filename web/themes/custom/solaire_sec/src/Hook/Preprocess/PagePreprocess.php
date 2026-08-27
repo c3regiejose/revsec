@@ -89,7 +89,7 @@ class PagePreprocess implements ContainerInjectionInterface {
    */
   #[Hook('preprocess_page')]
   public function preprocess(array &$variables): void {
-    if ($variables['node'] instanceof NodeInterface) {
+    if (isset($variables['node']) && $variables['node'] instanceof NodeInterface) {
 
       $node = $variables['node'];
 

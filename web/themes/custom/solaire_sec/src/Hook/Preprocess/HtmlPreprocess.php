@@ -15,6 +15,7 @@ class HtmlPreprocess{
    */
   #[Hook('preprocess_html')]
   public function preprocessHtml(array &$variables): void {
+    // $variables['#attached']['library'][] = 'solaire_sec/botpress';
     $variables['dataTheme'] = $this->getTheme();
   }
 
