@@ -1,0 +1,23 @@
+uuid: a9b88e52-f8a6-48bd-95b1-32c3ed076611
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6259f4ba-014c-432b-ba2a-c2ba1ee07a21'
+  module:
+    - block_content
+  theme:
+    - solaire_sec
+id: solaire_sec_copyright
+theme: solaire_sec
+region: footer_bottom
+weight: -5
+provider: null
+plugin: 'block_content:6259f4ba-014c-432b-ba2a-c2ba1ee07a21'
+settings:
+  id: 'block_content:6259f4ba-014c-432b-ba2a-c2ba1ee07a21'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

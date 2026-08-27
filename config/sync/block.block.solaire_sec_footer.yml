@@ -1,0 +1,25 @@
+uuid: 2bd0a22a-5e6a-4c30-a09a-a41199fce8e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - solaire_sec
+id: solaire_sec_footer
+theme: solaire_sec
+region: footer_bottom
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

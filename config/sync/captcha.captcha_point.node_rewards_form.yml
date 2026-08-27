@@ -1,0 +1,7 @@
+uuid: 76c7d659-1b70-462a-b1ac-88a854b44d83
+langcode: en
+status: false
+dependencies: {  }
+formId: node_rewards_form
+captchaType: default
+label: node_rewards_form

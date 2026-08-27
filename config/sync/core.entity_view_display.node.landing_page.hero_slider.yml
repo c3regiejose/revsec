@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.hero_slider
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_featured_on_frontpage_bann
+    - field.field.node.landing_page.field_hide_banner
+    - field.field.node.landing_page.field_metatag
     - field.field.node.landing_page.field_mobile_thumbnail
     - field.field.node.landing_page.field_section
     - field.field.node.landing_page.field_teaser_summary
@@ -114,6 +116,8 @@ content:
     weight: 1
     region: ds_content
 hidden:
+  field_hide_banner: true
+  field_metatag: true
   field_teaser_summary: true
   langcode: true
   links: true

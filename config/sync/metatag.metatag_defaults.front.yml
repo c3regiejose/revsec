@@ -7,5 +7,8 @@ _core:
 id: front
 label: 'Front page'
 tags:
-  canonical_url: '[site:url]'
+  canonical_url: 'https://sec.solaireresort.com'
+  description: 'Experience world-class gaming, entertainment, dining, and luxury accommodations with the best of Filipino hospitality at Solaire Resort Entertainment City'
+  robots: 'index, follow, max-snippet:-1, max-video-preview:-1'
   shortlink: '[site:url]'
+  title: 'Solaire Resort Entertainment City | Luxury Integrated Resort'

@@ -13,7 +13,7 @@ _core:
 id: solaire_sec_main_menu
 theme: solaire_sec
 region: primary_menu
-weight: 0
+weight: -10
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 2
+  depth: 4
   expand_all_items: true
 visibility: {  }

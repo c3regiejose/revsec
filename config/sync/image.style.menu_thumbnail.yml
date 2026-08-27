@@ -1,0 +1,15 @@
+uuid: a3482cba-cedd-41d7-baf1-dfcf1cdbc55e
+langcode: en
+status: true
+dependencies: {  }
+name: menu_thumbnail
+label: 'Menu Thumbnail'
+effects:
+  1945db0b-61b3-43c4-94b0-3bdc6ad1aea9:
+    uuid: 1945db0b-61b3-43c4-94b0-3bdc6ad1aea9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 240
+      height: 180
+      anchor: center-center

@@ -1,0 +1,23 @@
+uuid: ceb2984b-7981-40ca-8c0c-4e779ce9a793
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:20eddf31-2274-439f-80ed-ff0677eed4ad'
+  module:
+    - block_content
+  theme:
+    - solaire_sec
+id: solaire_sec_address
+theme: solaire_sec
+region: footer_top_right
+weight: -8
+provider: null
+plugin: 'block_content:20eddf31-2274-439f-80ed-ff0677eed4ad'
+settings:
+  id: 'block_content:20eddf31-2274-439f-80ed-ff0677eed4ad'
+  label: Address
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

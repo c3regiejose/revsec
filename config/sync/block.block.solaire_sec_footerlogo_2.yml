@@ -1,0 +1,27 @@
+uuid: 95c54e47-2a1e-4f05-8d14-594c0d7d12c6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5567c6ce-6688-48a3-82df-a4050776903d'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - solaire_sec
+third_party_settings:
+  block_class:
+    classes: block-footer-logo
+id: solaire_sec_footerlogo_2
+theme: solaire_sec
+region: footer_top_left
+weight: 0
+provider: null
+plugin: 'block_content:5567c6ce-6688-48a3-82df-a4050776903d'
+settings:
+  id: 'block_content:5567c6ce-6688-48a3-82df-a4050776903d'
+  label: 'Footer Logo'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

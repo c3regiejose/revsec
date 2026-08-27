@@ -6,7 +6,28 @@ dependencies:
     - field.field.paragraph.image_gallery_items.field_mobile_banner
     - paragraphs.paragraphs_type.image_gallery_items
   module:
+    - ds
     - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_mobile_banner
 id: paragraph.image_gallery_items.default
 targetEntityType: paragraph
 bundle: image_gallery_items
@@ -20,7 +41,35 @@ content:
       image_style: ''
       image_loading:
         attribute: lazy
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: false
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
     weight: 3
-    region: content
+    region: ds_content
 hidden: {  }

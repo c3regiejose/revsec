@@ -1,0 +1,7 @@
+uuid: 2e327259-c40c-489b-887c-059ab4c0e0f4
+langcode: en
+status: false
+dependencies: {  }
+formId: node_dining_form
+captchaType: default
+label: node_dining_form

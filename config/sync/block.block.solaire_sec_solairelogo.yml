@@ -1,0 +1,23 @@
+uuid: 6cd3d971-2529-4467-9aa4-616bc5544166
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:584f7daf-4c7c-45fd-be2b-edf4cc8c6ea9'
+  module:
+    - block_content
+  theme:
+    - solaire_sec
+id: solaire_sec_solairelogo
+theme: solaire_sec
+region: primary_menu
+weight: -9
+provider: null
+plugin: 'block_content:584f7daf-4c7c-45fd-be2b-edf4cc8c6ea9'
+settings:
+  id: 'block_content:584f7daf-4c7c-45fd-be2b-edf4cc8c6ea9'
+  label: 'Solaire Logo'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

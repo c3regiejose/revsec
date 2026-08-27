@@ -10,8 +10,8 @@ _core:
   default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
 id: solaire_sec_powered
 theme: solaire_sec
-region: sidebar_first
-weight: 0
+region: header
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:

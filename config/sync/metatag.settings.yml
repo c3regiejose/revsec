@@ -1,10 +1,39 @@
 _core:
   default_config_hash: xF-yd0bqa4S5zWER0Kasv-BK0-xGEegxnFERohs2QTs
-entity_type_groups: {  }
-separator: ''
+entity_type_groups:
+  file:
+    file:
+      basic: basic
+      advanced: advanced
+      app_links: app_links
+      favicons: favicons
+      open_graph: open_graph
+      google_cse: google_cse
+      mobile: mobile
+  node:
+    landing_page:
+      basic: basic
+      advanced: advanced
+      app_links: app_links
+      favicons: favicons
+      open_graph: open_graph
+      facebook: facebook
+      hreflang: hreflang
+      google_cse: google_cse
+      mobile: mobile
+separator: ','
 tag_trim_method: beforeValue
 use_maxlength: true
-tag_trim_maxlength: {  }
+tag_trim_maxlength:
+  metatag_maxlength_title: null
+  metatag_maxlength_description: null
+  metatag_maxlength_abstract: null
+  metatag_maxlength_og_site_name: null
+  metatag_maxlength_og_title: null
+  metatag_maxlength_og_description: null
+  metatag_maxlength_pinterest_description: null
+  metatag_maxlength_twitter_cards_title: null
+  metatag_maxlength_twitter_cards_description: null
 tag_scroll_max_height: ''
 tag_trim_end: '|.,-:;/+&([{"'''
 trim_suffix: ''

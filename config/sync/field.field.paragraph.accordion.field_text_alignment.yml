@@ -14,7 +14,7 @@ bundle: accordion
 label: 'Text Alignment'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: left

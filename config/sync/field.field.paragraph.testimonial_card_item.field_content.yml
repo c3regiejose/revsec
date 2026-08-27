@@ -14,7 +14,7 @@ bundle: testimonial_card_item
 label: Testimonial
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

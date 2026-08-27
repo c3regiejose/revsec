@@ -1,0 +1,23 @@
+uuid: e78df63a-0a5f-4388-8657-a0ad50973a58
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:310db62d-ec55-4d53-b482-02ab711b53c4'
+  module:
+    - block_content
+  theme:
+    - solaire_sec
+id: solaire_sec_solairebooknow
+theme: solaire_sec
+region: primary_menu
+weight: -8
+provider: null
+plugin: 'block_content:310db62d-ec55-4d53-b482-02ab711b53c4'
+settings:
+  id: 'block_content:310db62d-ec55-4d53-b482-02ab711b53c4'
+  label: 'Solaire Book Now'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

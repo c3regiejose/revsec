@@ -1,0 +1,76 @@
+display:
+  default:
+    display_title: 默认
+    display_options:
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        entity_uuid:
+          label: 实体的UUID
+          separator: ', '
+        entity_id:
+          label: 实体ID
+          separator: ', '
+        langcode:
+          label: 语言
+          separator: ', '
+        entity_label:
+          label: 链接到实体
+        entity_type_id:
+          label: 实体类型
+          separator: ', '
+        entity_bundle:
+          label: 包
+        remote_website:
+          separator: ', '
+        channel_id:
+          separator: ', '
+        last_import:
+          separator: ', '
+        policy:
+          label: 策略
+          separator: ', '
+        operations:
+          label: 操作
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 每页条目数
+            items_per_page_options_all_label: '- 全部 -'
+            offset_label: 偏移量
+      exposed_form:
+        options:
+          submit_button: 应用
+          reset_button_label: 重置
+          exposed_sorts_label: 排序依据
+          sort_asc_label: 升序
+          sort_desc_label: 降序
+      sorts:
+        entity_type_id:
+          expose:
+            label: 实体类型
+        langcode:
+          expose:
+            label: 语言
+      filters:
+        entity_type_id:
+          expose:
+            label: 实体类型
+        entity_bundle:
+          expose:
+            label: 实体包
+        langcode:
+          expose:
+            label: 原始语言
+        entity_id:
+          expose:
+            label: 实体ID
+        policy:
+          expose:
+            label: 策略
+  page_1:
+    display_title: 页面

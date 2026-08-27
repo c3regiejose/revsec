@@ -1,0 +1,7 @@
+uuid: 6eea236a-e543-483e-ba7b-b319e01446da
+langcode: en
+status: false
+dependencies: {  }
+formId: node_rooms_form
+captchaType: default
+label: node_rooms_form

@@ -12,7 +12,7 @@ bundle: tabs_content_by_reference_items
 label: Heading
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

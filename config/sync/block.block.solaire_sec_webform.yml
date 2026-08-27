@@ -1,0 +1,30 @@
+uuid: 70f82779-345f-438a-a833-33da6f7bb423
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.footer_subscription
+  module:
+    - block_class
+    - webform
+  theme:
+    - solaire_sec
+third_party_settings:
+  block_class:
+    classes: block-webform
+id: solaire_sec_webform
+theme: solaire_sec
+region: footer_top_left
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: footer_subscription
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

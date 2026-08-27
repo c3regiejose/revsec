@@ -6,6 +6,10 @@ url:
   source: path_prefix
   prefixes:
     en: ''
+    zh-hans: zh-hans
+    ko: ko
   domains:
     en: ''
+    zh-hans: ''
+    ko: ''
 selected_langcode: site_default

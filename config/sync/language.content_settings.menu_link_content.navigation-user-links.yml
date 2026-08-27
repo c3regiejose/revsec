@@ -1,0 +1,18 @@
+uuid: 5fd503a6-68e3-40c3-a0f3-b42ffd279a23
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.navigation-user-links
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: menu_link_content.navigation-user-links
+target_entity_type_id: menu_link_content
+target_bundle: navigation-user-links
+default_langcode: site_default
+language_alterable: false

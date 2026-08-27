@@ -1,0 +1,23 @@
+uuid: 6dd1d9d2-d439-4981-add6-36012530448a
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:5567c6ce-6688-48a3-82df-a4050776903d'
+  module:
+    - block_content
+  theme:
+    - solaire_sec
+id: solaire_sec_footerlogo
+theme: solaire_sec
+region: header
+weight: -9
+provider: null
+plugin: 'block_content:5567c6ce-6688-48a3-82df-a4050776903d'
+settings:
+  id: 'block_content:5567c6ce-6688-48a3-82df-a4050776903d'
+  label: 'Footer Logo'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

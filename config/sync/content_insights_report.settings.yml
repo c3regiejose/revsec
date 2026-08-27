@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: cidkB81cfMD5rLuq1t2c_bStaOrzGvumt5IepdL6mfM
+show_summary: true
+show_insights_report: true
+show_workflow_moderation_state_report: false
+show_created_by_and_date: true
+percentage_total: all_nodes
+number_of_months: 6
+sort_by_field: total_percentage
+sort_by_direction: desc
+show_print: true
+show_empty_results: true

@@ -1,0 +1,41 @@
+uuid: ed7e22ae-681c-4c6f-9651-e3c3e946d270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_blurb
+    - field.field.menu_link_content.main.field_image
+    - image.style.menu_thumbnail
+    - system.menu.main
+  module:
+    - image
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_blurb:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: menu_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

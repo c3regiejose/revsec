@@ -1,0 +1,29 @@
+uuid: 5bfbdbc5-b55e-4f8c-a7ed-d40e9f53ee8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-careeer
+  module:
+    - block_class
+    - system
+  theme:
+    - solaire_sec
+third_party_settings:
+  block_class:
+    classes: footer-menu-career
+id: solaire_sec_footercareeer
+theme: solaire_sec
+region: footer_top_right
+weight: -9
+provider: null
+plugin: 'system_menu_block:footer-careeer'
+settings:
+  id: 'system_menu_block:footer-careeer'
+  label: 'Footer Career'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

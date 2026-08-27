@@ -1,0 +1,19 @@
+uuid: cc61d200-6ddc-46ee-8190-1091e1a1aade
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.field_blurb
+field_name: field_blurb
+entity_type: menu_link_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

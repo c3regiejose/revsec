@@ -8,4 +8,9 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url]'
+  description: 'Solaire Entertainment City'
+  keywords: 'solaire manila, solaire hotel, solaire philippines, solaire hotel manila'
+  robots: 'index, follow, max-snippet:-1, max-video-preview:-1'
+  shortcut_icon: /themes/custom/solaire_sec/images/favicon.png
+  shortlink: 'https://sec.solaireresort.com/'
   title: '[current-page:title] | [site:name]'

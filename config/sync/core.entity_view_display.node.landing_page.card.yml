@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.card
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_featured_on_frontpage_bann
+    - field.field.node.landing_page.field_hide_banner
+    - field.field.node.landing_page.field_metatag
     - field.field.node.landing_page.field_mobile_thumbnail
     - field.field.node.landing_page.field_section
     - field.field.node.landing_page.field_teaser_summary
@@ -45,6 +47,8 @@ content:
 hidden:
   field_banner: true
   field_featured_on_frontpage_bann: true
+  field_hide_banner: true
+  field_metatag: true
   field_section: true
   langcode: true
   links: true

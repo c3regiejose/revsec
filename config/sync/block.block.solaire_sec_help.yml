@@ -10,8 +10,8 @@ _core:
   default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
 id: solaire_sec_help
 theme: solaire_sec
-region: sidebar_first
-weight: 0
+region: header
+weight: -8
 provider: null
 plugin: help_block
 settings:

@@ -1,0 +1,21 @@
+uuid: f62d3dc5-8df0-4c79-9100-a9f8128f5418
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_banner
+    - node.type.landing_page
+id: node.landing_page.field_hide_banner
+field_name: field_hide_banner
+entity_type: node
+bundle: landing_page
+label: 'Hide Banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

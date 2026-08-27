@@ -7,12 +7,15 @@ module:
   basic_auth: 0
   big_pipe: 0
   block: 0
+  block_class: 0
   block_content: 0
   block_field: 0
   breakpoint: 0
+  captcha: 0
   ckeditor5: 0
   config: 0
   config_translation: 0
+  content_insights_report: 0
   contextual: 0
   datetime: 0
   dblog: 0
@@ -30,6 +33,7 @@ module:
   filter: 0
   help: 0
   image: 0
+  image_captcha: 0
   imce: 0
   jsonapi: 0
   language: 0
@@ -38,7 +42,10 @@ module:
   link: 0
   locale: 0
   media: 0
+  media_embed_extra: 0
   media_library: 0
+  menu_item_extras: 0
+  menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
@@ -61,8 +68,10 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_list_filter: 0
   path: 0
   path_alias: 0
+  recaptcha: 0
   rest: 0
   serialization: 0
   system: 0
@@ -75,10 +84,8 @@ module:
   view_mode_selector: 0
   views_ui: 0
   webform: 0
-  webform_access: 0
   webform_attachment: 0
   webform_image_select: 0
-  webform_node: 0
   webform_options_custom: 0
   webform_options_limit: 0
   webform_scheduled_email: 0

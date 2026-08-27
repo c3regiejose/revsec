@@ -1,0 +1,23 @@
+uuid: 7a94c9d2-05a3-44cc-8995-2ad826d832b1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:96bf1a7f-e1c2-4e52-870e-04e7cd2c2d7c'
+  module:
+    - block_content
+  theme:
+    - solaire_sec
+id: solaire_sec_solaireportal
+theme: solaire_sec
+region: top_header
+weight: -10
+provider: null
+plugin: 'block_content:96bf1a7f-e1c2-4e52-870e-04e7cd2c2d7c'
+settings:
+  id: 'block_content:96bf1a7f-e1c2-4e52-870e-04e7cd2c2d7c'
+  label: 'Solaire Portal'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

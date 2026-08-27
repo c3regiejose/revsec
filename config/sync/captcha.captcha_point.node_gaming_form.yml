@@ -1,0 +1,7 @@
+uuid: cd6cd110-3918-42e8-9805-4cc8e736a6d6
+langcode: en
+status: false
+dependencies: {  }
+formId: node_gaming_form
+captchaType: default
+label: node_gaming_form

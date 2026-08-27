@@ -14,11 +14,15 @@ bundle: tabs_content_by_view_items
 label: 'Views Block'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   selection: blocks
   selection_settings:
-    plugin_ids: {  }
+    plugin_ids:
+      'views_block:offers-block_1': 'views_block:offers-block_1'
+      'views_block:offers-block_2': 'views_block:offers-block_2'
+      'views_block:offers-block_3': 'views_block:offers-block_3'
+      'views_block:offers-block_4': 'views_block:offers-block_4'
 field_type: block_field

@@ -1,0 +1,23 @@
+uuid: efea3f32-44aa-49df-91f9-dc19000a14f2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:91e4ff6b-b5e1-4c30-a20d-12f6416bc157'
+  module:
+    - block_content
+  theme:
+    - solaire_sec
+id: solaire_sec_botpress
+theme: solaire_sec
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'block_content:91e4ff6b-b5e1-4c30-a20d-12f6416bc157'
+settings:
+  id: 'block_content:91e4ff6b-b5e1-4c30-a20d-12f6416bc157'
+  label: BotPress
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

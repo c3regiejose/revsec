@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.landing_page.field_banner
     - field.field.node.landing_page.field_featured_on_frontpage_bann
+    - field.field.node.landing_page.field_hide_banner
+    - field.field.node.landing_page.field_metatag
     - field.field.node.landing_page.field_mobile_thumbnail
     - field.field.node.landing_page.field_section
     - field.field.node.landing_page.field_teaser_summary
@@ -14,6 +16,7 @@ dependencies:
     - field_group
     - image
     - imce
+    - metatag
     - paragraphs
     - path
     - text
@@ -55,6 +58,7 @@ third_party_settings:
         width_breakpoint: 640
     group_banner:
       children:
+        - field_hide_banner
         - field_featured_on_frontpage_bann
         - field_banner
         - field_mobile_thumbnail
@@ -116,7 +120,7 @@ content:
     third_party_settings: {  }
   field_banner:
     type: paragraphs
-    weight: 31
+    weight: 33
     region: content
     settings:
       title: Paragraph
@@ -136,14 +140,29 @@ content:
     third_party_settings: {  }
   field_featured_on_frontpage_bann:
     type: boolean_checkbox
-    weight: 30
+    weight: 32
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  field_hide_banner:
+    type: boolean_checkbox
+    weight: 31
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 36
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
   field_mobile_thumbnail:
     type: image_image
-    weight: 32
+    weight: 34
     region: content
     settings:
       progress_indicator: throbber
@@ -173,7 +192,7 @@ content:
     third_party_settings: {  }
   field_teaser_summary:
     type: text_textarea
-    weight: 2
+    weight: 35
     region: content
     settings:
       rows: 5
@@ -201,7 +220,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 34
     region: content
     settings:
       size: 60

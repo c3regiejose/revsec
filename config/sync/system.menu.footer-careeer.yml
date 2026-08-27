@@ -1,0 +1,8 @@
+uuid: 15805c1c-e8b6-4b27-a6f5-62e2e324d138
+langcode: en
+status: true
+dependencies: {  }
+id: footer-careeer
+label: 'Footer Careeer'
+description: ''
+locked: false

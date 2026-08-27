@@ -15,7 +15,7 @@ bundle: tabs_content_by_view
 label: 'Referenced Content'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
