@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1b0fc1ad92f61073a5a4bc3408efd6f",
+    "content-hash": "2d32b5b27bfa9ee3bd41c59080571de0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1897,6 +1897,65 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/captcha",
                 "issues": "https://www.drupal.org/project/issues/captcha"
+            }
+        },
+        {
+            "name": "drupal/content_insights_report",
+            "version": "1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/content_insights_report.git",
+                "reference": "1.0.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/content_insights_report-1.0.11.zip",
+                "reference": "1.0.11",
+                "shasum": "baf91955c114e261dcdd7979ef7f14937867ee9e"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11 || ^12"
+            },
+            "require-dev": {
+                "behat/mink": "^1.12",
+                "behat/mink-browserkit-driver": "^2.2",
+                "drupal/gnode": "*",
+                "phpunit/phpunit": "^11.0"
+            },
+            "suggest": {
+                "drupal/group": "Required only if you want to use the content_insights_report_group submodule (^3)"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.11",
+                    "datestamp": "1781694500",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kobus van Wyk",
+                    "homepage": "https://www.drupal.org/u/kobusvw",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "kobusvw",
+                    "homepage": "https://www.drupal.org/user/2580190"
+                }
+            ],
+            "description": "This module generates a Content Insights Report that provides valuable data and analysis about the content in your system. The report is based on various parameters, including content type, status, and workflows, giving you insights into the overall performance and status of the content within your system.",
+            "homepage": "http://drupal.org/project/content_insights_report",
+            "support": {
+                "source": "https://git.drupalcode.org/project/content_insights_report",
+                "issues": "https://drupal.org/project/issues/content_insights_report"
             }
         },
         {
