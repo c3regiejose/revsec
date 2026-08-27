@@ -44,12 +44,34 @@
 #}
 <div class="layout-container">
 
-  <header>
-    {{ page.header }}
+  {% if page.top_header %}
+    <div class="region region-header top-header">
+      {{ page.top_header }}
+    </div>
+  {% endif %}
+  <header class="header">
+    {% if page.primary_menu %}
+      <div class="region region-primary-menu">
+        
+        {{ page.primary_menu }}
+        <div class='sn-hamburger'>
+          <span></span>
+          <span></span>
+          <span></span>
+          <p>MENU</p>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.secondary_menu %}
+      <div class="region region-secondary-menu">
+        {{ page.secondary_menu }}
+      </div>
+    {% endif %}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  
+  
 
   {{ page.breadcrumb }}
 

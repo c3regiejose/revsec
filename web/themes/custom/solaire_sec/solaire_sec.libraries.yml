@@ -56,6 +56,7 @@ base:
     js/utilities/breakpoint.js: { }
     js/utilities/debounce.js: { }
     js/utilities/element.js: { }
+    js/botpress.js: { }
 dialog:
   version: VERSION
   css:
@@ -134,6 +135,33 @@ swiper:
   js:
     https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js:
       type: external
+  dependencies:
+    - core/drupal
+    - core/once
+
+primary.menu:
+  css:
+    component:
+      css/components/header.css: {  }
+  js:
+    js/header.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/jquery
+
+botpress:
+  js:
+    https://cdn.botpress.cloud/webchat/v3.7/inject.js:
+      type: external
+      minified: true
+    # My Account
+    # https://files.bpcontent.cloud/2026/08/20/03/20260820033430-Z12FHHNA.js:
+    # development account
+    https://files.bpcontent.cloud/2026/08/24/09/20260824092042-DS6XF6Z4.js:
+      type: external
+      attributes:
+        defer: true
   dependencies:
     - core/drupal
     - core/once

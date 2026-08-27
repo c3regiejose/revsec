@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Main Menu
+description: Template for Main Menu
+status: stable
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+
+slots:
+  content:
+    title: Menu Item
+    description: Menu item render array.

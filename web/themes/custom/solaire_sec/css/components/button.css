@@ -13,3 +13,17 @@
   margin-right: 0;
   margin-left: 0;
 }
+
+a.book-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  background-color: var(--primary);
+  height: 2.5rem;
+  transition: 0.3s all var(--ease);
+  font-weight: 500;
+}
