@@ -5,12 +5,22 @@ namespace Drupal\solaire_sec\Hook\Preprocess\Paragraph;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
+use Drupal\Core\Language\LanguageManagerInterface;
+use Drupal\Core\Entity\EntityRepositoryInterface;
 
 class HighlightCardsVariablesBuilder {
   protected EntityTypeManagerInterface $entityTypeManager;
+  protected LanguageManagerInterface $languageManager;
+  protected EntityRepositoryInterface $entityRepository;
 
-  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(
+    EntityTypeManagerInterface $entity_type_manager,
+    LanguageManagerInterface $language_manager,
+    EntityRepositoryInterface $entity_repository
+  ) {
     $this->entityTypeManager = $entity_type_manager;
+    $this->languageManager = $language_manager;
+    $this->entityRepository = $entity_repository;
   }
 
   /**
@@ -25,11 +35,11 @@ class HighlightCardsVariablesBuilder {
   public function buildHighlightCardsVariables(ParagraphInterface $paragraph): array {
     $result = [];
 
-    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $result['highlight_cards_title'] = $title;
     }
 
-    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $result['highlight_cards_content'] = $content;
     }
 
@@ -57,11 +67,11 @@ class HighlightCardsVariablesBuilder {
   protected function buildHighlightCardItem(ParagraphInterface $paragraph): array {
     $item = [];
 
-    if ($heading = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($heading = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $item['heading'] = $heading;
     }
 
-    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $item['content'] = $content;
     }
 
