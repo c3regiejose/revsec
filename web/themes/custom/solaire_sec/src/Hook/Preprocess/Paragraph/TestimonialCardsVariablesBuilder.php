@@ -2,25 +2,31 @@
 
 namespace Drupal\solaire_sec\Hook\Preprocess\Paragraph;
 
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
 
 class TestimonialCardsVariablesBuilder {
   protected EntityTypeManagerInterface $entityTypeManager;
+  protected EntityRepositoryInterface $entityRepository;
 
-  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(
+    EntityTypeManagerInterface $entity_type_manager,
+    EntityRepositoryInterface $entity_repository
+  ) {
     $this->entityTypeManager = $entity_type_manager;
+    $this->entityRepository = $entity_repository;
   }
 
   public function buildTestimonialCardsVariables(ParagraphInterface $paragraph): array {
     $result = [];
 
-    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $result['testimonial_cards_title'] = $title;
     }
 
-    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $result['testimonial_cards_content'] = $content;
     }
 
@@ -48,23 +54,23 @@ class TestimonialCardsVariablesBuilder {
   protected function buildTestimonialCardItem(ParagraphInterface $paragraph): array {
     $item = [];
 
-    if ($heading = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($heading = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $item['heading'] = $heading;
     }
 
-    if ($quote = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($quote = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $item['quote'] = $quote;
     }
 
-    if ($customerName = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_customer_name')) {
+    if ($customerName = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_customer_name', $this->entityRepository)) {
       $item['customer_name'] = $customerName;
     }
 
-    if ($date = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_date')) {
+    if ($date = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_date', $this->entityRepository)) {
       $item['date'] = $date;
     }
 
-    if ($rating = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_rating')) {
+    if ($rating = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_rating', $this->entityRepository)) {
       $item['rating'] = $rating;
     }
 
