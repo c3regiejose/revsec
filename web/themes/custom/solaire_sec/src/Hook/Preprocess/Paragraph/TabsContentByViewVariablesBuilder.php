@@ -3,6 +3,7 @@
 namespace Drupal\solaire_sec\Hook\Preprocess\Paragraph;
 
 use Drupal\Core\Block\BlockManagerInterface;
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\Context\ContextHandlerInterface;
 use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
@@ -19,26 +20,30 @@ class TabsContentByViewVariablesBuilder {
 
   protected EntityTypeManagerInterface $entityTypeManager;
 
+  protected EntityRepositoryInterface $entityRepository;
+
   public function __construct(
     BlockManagerInterface $block_manager,
     ContextRepositoryInterface $context_repository,
     ContextHandlerInterface $context_handler,
-    EntityTypeManagerInterface $entity_type_manager
+    EntityTypeManagerInterface $entity_type_manager,
+    EntityRepositoryInterface $entity_repository
   ) {
     $this->blockManager = $block_manager;
     $this->contextRepository = $context_repository;
     $this->contextHandler = $context_handler;
     $this->entityTypeManager = $entity_type_manager;
+    $this->entityRepository = $entity_repository;
   }
 
   public function buildTabsContentByViewVariables(ParagraphInterface $paragraph): array {
     $result = [];
 
-    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $result['tab_content_title'] = $title;
     }
 
-    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $result['tab_content_content'] = $content;
     }
 
