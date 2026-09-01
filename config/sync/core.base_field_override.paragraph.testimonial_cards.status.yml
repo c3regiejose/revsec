@@ -1,0 +1,22 @@
+uuid: 676b7aa3-aa94-4960-a170-ca1f609e1935
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.testimonial_cards
+id: paragraph.testimonial_cards.status
+field_name: status
+entity_type: paragraph
+bundle: testimonial_cards
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

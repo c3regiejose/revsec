@@ -1,0 +1,18 @@
+uuid: edafb6cf-6f21-4cc8-9a08-3d8eb38f7932
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.testimonial_cards
+id: paragraph.testimonial_cards.created
+field_name: created
+entity_type: paragraph
+bundle: testimonial_cards
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

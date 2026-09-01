@@ -15,7 +15,7 @@ bundle: promotions
 label: 'Referenced Content'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -28,14 +28,38 @@ settings:
       accordion:
         weight: 10
         enabled: false
+      accordion_items:
+        weight: 24
+        enabled: false
       banner:
         weight: 11
         enabled: false
       block:
         weight: 12
         enabled: false
-      experience_signature:
-        weight: 13
+      block_views:
+        weight: 27
+        enabled: false
+      highlight_card_item:
+        weight: 29
+        enabled: false
+      highlight_cards:
+        weight: 28
+        enabled: false
+      icon_card_item:
+        weight: 31
+        enabled: false
+      icon_cards:
+        weight: 30
+        enabled: false
+      image_and_text:
+        weight: 32
+        enabled: false
+      image_gallery:
+        weight: 33
+        enabled: false
+      image_gallery_items:
+        weight: 34
         enabled: false
       information_block:
         weight: 14
@@ -48,5 +72,23 @@ settings:
         enabled: true
       promotions:
         weight: 9
+        enabled: false
+      tabs_content_by_reference:
+        weight: 39
+        enabled: false
+      tabs_content_by_reference_items:
+        weight: 40
+        enabled: false
+      tabs_content_by_view:
+        weight: 41
+        enabled: false
+      tabs_content_by_view_items:
+        weight: 42
+        enabled: false
+      testimonial_card_item:
+        weight: 44
+        enabled: false
+      testimonial_cards:
+        weight: 43
         enabled: false
 field_type: entity_reference_revisions

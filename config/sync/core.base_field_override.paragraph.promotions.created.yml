@@ -1,0 +1,18 @@
+uuid: 5ba1abec-66f3-4b8f-b121-5626acbc7b00
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.promotions
+id: paragraph.promotions.created
+field_name: created
+entity_type: paragraph
+bundle: promotions
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

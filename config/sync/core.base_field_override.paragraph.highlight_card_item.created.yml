@@ -1,0 +1,18 @@
+uuid: 4cc24759-3454-4ece-bc15-c35be70f1a38
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.highlight_card_item
+id: paragraph.highlight_card_item.created
+field_name: created
+entity_type: paragraph
+bundle: highlight_card_item
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -31,6 +31,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  google_analytics: 0
+  gtm: 0
   help: 0
   image: 0
   image_captcha: 0
@@ -71,6 +73,7 @@ module:
   paragraphs_list_filter: 0
   path: 0
   path_alias: 0
+  phpmailer_smtp: 0
   recaptcha: 0
   rest: 0
   serialization: 0

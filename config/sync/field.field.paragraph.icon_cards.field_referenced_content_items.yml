@@ -15,7 +15,7 @@ bundle: icon_cards
 label: 'Referenced Content'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -55,6 +55,12 @@ settings:
       image_and_text:
         weight: 22
         enabled: false
+      image_gallery:
+        weight: 33
+        enabled: false
+      image_gallery_items:
+        weight: 34
+        enabled: false
       information_block:
         weight: 14
         enabled: false
@@ -78,5 +84,11 @@ settings:
         enabled: false
       tabs_content_by_view_items:
         weight: 30
+        enabled: false
+      testimonial_card_item:
+        weight: 44
+        enabled: false
+      testimonial_cards:
+        weight: 43
         enabled: false
 field_type: entity_reference_revisions

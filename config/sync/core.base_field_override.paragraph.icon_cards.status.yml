@@ -1,0 +1,22 @@
+uuid: 00d14558-abf0-4989-8cd2-66e76e3ae3aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.icon_cards
+id: paragraph.icon_cards.status
+field_name: status
+entity_type: paragraph
+bundle: icon_cards
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
