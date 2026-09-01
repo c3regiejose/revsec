@@ -2,6 +2,7 @@
 
 namespace Drupal\solaire_sec\Hook\Preprocess\Paragraph;
 
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\paragraphs\ParagraphInterface;
@@ -12,15 +13,18 @@ class ImageGalleryVariablesBuilder {
   protected EntityTypeManagerInterface $entityTypeManager;
   protected FileSystemInterface $fileSystem;
   protected FileUrlGeneratorInterface $fileUrlGenerator;
+  protected EntityRepositoryInterface $entityRepository;
 
   public function __construct(
     EntityTypeManagerInterface $entity_type_manager,
     FileSystemInterface $file_system,
-    FileUrlGeneratorInterface $file_url_generator
+    FileUrlGeneratorInterface $file_url_generator,
+    EntityRepositoryInterface $entity_repository
   ) {
     $this->entityTypeManager = $entity_type_manager;
     $this->fileSystem = $file_system;
     $this->fileUrlGenerator = $file_url_generator;
+    $this->entityRepository = $entity_repository;
   }
 
   /**
@@ -35,15 +39,15 @@ class ImageGalleryVariablesBuilder {
   public function buildImageGalleryVariables(ParagraphInterface $paragraph): array {
     $result = [];
 
-    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $result['image_gallery_title'] = $title;
     }
 
-    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $result['image_gallery_content'] = $content;
     }
 
-    if ($slideType = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_slide_type')) {
+    if ($slideType = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_slide_type', $this->entityRepository)) {
       $result['image_gallery_slide_type'] = $slideType;
     }
 
