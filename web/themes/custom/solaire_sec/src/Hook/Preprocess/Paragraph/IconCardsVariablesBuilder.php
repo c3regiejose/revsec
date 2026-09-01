@@ -2,15 +2,21 @@
 
 namespace Drupal\solaire_sec\Hook\Preprocess\Paragraph;
 
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
 
 class IconCardsVariablesBuilder {
   protected EntityTypeManagerInterface $entityTypeManager;
+  protected EntityRepositoryInterface $entityRepository;
 
-  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(
+    EntityTypeManagerInterface $entity_type_manager,
+    EntityRepositoryInterface $entity_repository
+  ) {
     $this->entityTypeManager = $entity_type_manager;
+    $this->entityRepository = $entity_repository;
   }
 
   /**
@@ -25,11 +31,11 @@ class IconCardsVariablesBuilder {
   public function buildIconCardsVariables(ParagraphInterface $paragraph): array {
     $result = [];
 
-    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $result['icon_cards_title'] = $title;
     }
 
-    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $result['icon_cards_content'] = $content;
     }
 
@@ -67,15 +73,15 @@ class IconCardsVariablesBuilder {
   protected function buildIconCardItem(ParagraphInterface $paragraph): array {
     $card = [];
 
-    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title')) {
+    if ($title = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_title', $this->entityRepository)) {
       $card['heading'] = $title;
     }
 
-    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content')) {
+    if ($content = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_content', $this->entityRepository)) {
       $card['content'] = $content;
     }
 
-    if ($icon = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_svg_icon')) {
+    if ($icon = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_svg_icon', $this->entityRepository)) {
       $card['icon'] = $icon;
     }
 
