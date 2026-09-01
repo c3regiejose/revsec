@@ -8,7 +8,9 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Block\BlockManagerInterface;
 use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
 use Drupal\Core\Plugin\Context\ContextHandlerInterface;
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\AccordionVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\HighlightCardsVariablesBuilder;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\IconCardsVariablesBuilder;
@@ -48,6 +50,8 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
   protected EntityTypeManagerInterface $entityTypeManager;
+  protected EntityRepositoryInterface $entityRepository;
+  protected LanguageManagerInterface $languageManager;
   protected FileSystemInterface $fileSystem;
   protected FileUrlGeneratorInterface $fileUrlGenerator;
 
@@ -59,6 +63,8 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     ContextRepositoryInterface $context_repository,
     ContextHandlerInterface $context_handler,
     EntityTypeManagerInterface $entity_type_manager,
+    EntityRepositoryInterface $entity_repository,
+    LanguageManagerInterface $language_manager,
     FileSystemInterface $file_system,
     FileUrlGeneratorInterface $file_url_generator
   ) {
@@ -66,6 +72,8 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     $this->contextRepository = $context_repository;
     $this->contextHandler = $context_handler;
     $this->entityTypeManager = $entity_type_manager;
+    $this->entityRepository = $entity_repository;
+    $this->languageManager = $language_manager;
     $this->fileSystem = $file_system;
     $this->fileUrlGenerator = $file_url_generator;
   }
@@ -79,6 +87,8 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
       $container->get('context.repository'),
       $container->get('context.handler'),
       $container->get('entity_type.manager'),
+      $container->get('entity.repository'),
+      $container->get('language_manager'),
       $container->get('file_system'),
       $container->get('file_url_generator')
     );
@@ -107,12 +117,12 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
     $variables = [];
 
     // Text Alignment.
-    if ($textAlignment = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_text_alignment')) {
+    if ($textAlignment = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_text_alignment', $this->entityRepository)) {
       $variables['textAlignment'] = 'text-align-' . $textAlignment;
     }
 
     // Slide per view.
-    if ($slides = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_slide_per_view')) {
+    if ($slides = ParagraphHelper::getParagraphFieldValue($paragraph, 'field_slide_per_view', $this->entityRepository)) {
       $variables['slidesPerView'] = ($slides === '') ? 3 : (int) $slides;
     }
 
@@ -122,32 +132,37 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
         $this->blockManager,
         $this->contextRepository,
         $this->contextHandler,
-        $this->entityTypeManager
+        $this->entityTypeManager,
+        $this->entityRepository
       );
       $variables = array_merge($variables, $builder->buildTabsContentByViewVariables($paragraph));
     }
 
     // Accordion.
     if ($paragraph->bundle() === 'accordion') {
-      $builder = new AccordionVariablesBuilder($this->entityTypeManager);
+      $builder = new AccordionVariablesBuilder($this->entityTypeManager, $this->entityRepository);
       $variables = array_merge($variables, $builder->buildAccordionVariables($paragraph));
     }
 
     // Icon Cards.
     if ($paragraph->bundle() === 'icon_cards') {
-      $builder = new IconCardsVariablesBuilder($this->entityTypeManager);
+      $builder = new IconCardsVariablesBuilder($this->entityTypeManager, $this->entityRepository);
       $variables = array_merge($variables, $builder->buildIconCardsVariables($paragraph));
     }
 
     // Testimonial Cards.
     if ($paragraph->bundle() === 'testimonial_cards') {
-      $builder = new TestimonialCardsVariablesBuilder($this->entityTypeManager);
+      $builder = new TestimonialCardsVariablesBuilder($this->entityTypeManager, $this->entityRepository);
       $variables = array_merge($variables, $builder->buildTestimonialCardsVariables($paragraph));
     }
 
     // Hightlighted Card.
     if ($paragraph->bundle() == 'highlight_cards') {
-      $builder = new HighlightCardsVariablesBuilder($this->entityTypeManager);
+      $builder = new HighlightCardsVariablesBuilder(
+        $this->entityTypeManager,
+        $this->languageManager,
+        $this->entityRepository
+      );
       $variables = array_merge($variables, $builder->buildHighlightCardsVariables($paragraph));
     }
 
@@ -156,7 +171,8 @@ class ParagraphPreprocess implements ContainerInjectionInterface {
       $builder = new ImageGalleryVariablesBuilder(
         $this->entityTypeManager, 
         $this->fileSystem, 
-        $this->fileUrlGenerator
+        $this->fileUrlGenerator,
+        $this->entityRepository
       );
       $variables = array_merge($variables, $builder->buildImageGalleryVariables($paragraph));
     }

@@ -3,6 +3,7 @@
 namespace Drupal\solaire_sec\Hook\Preprocess\Paragraph;
 
 use Drupal\Core\Block\BlockManagerInterface;
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\Context\ContextAwarePluginInterface;
 use Drupal\Core\Plugin\Context\ContextHandlerInterface;
@@ -22,10 +23,19 @@ class ParagraphHelper {
    * @return string|null
    *   The field value or NULL when the field is absent or empty.
    */
-  public static function getParagraphFieldValue(ParagraphInterface $paragraph, string $fieldName): ?string {
+  public static function getParagraphFieldValue(
+    ParagraphInterface $paragraph, 
+    string $fieldName,
+    ?EntityRepositoryInterface $entity_repository = NULL
+  ): ?string {
+    if ($entity_repository) {
+      $paragraph = $entity_repository->getTranslationFromContext($paragraph);
+    }
+
     if ($paragraph->hasField($fieldName) && !$paragraph->get($fieldName)->isEmpty()) {
       return $paragraph->get($fieldName)->value;
     }
+
     return '';
   }
 
