@@ -197,6 +197,10 @@ class ParagraphHelper {
    *   The paragraph containing image fields.
    * @param \Drupal\Core\File\FileUrlGeneratorInterface $file_url_generator
    *   The file URL generator service.
+   * @param string $field_name
+   *   The field machine name.
+   * @param \Drupal\Core\Entity\EntityRepositoryInterface|null $entity_repository
+   *   Optional. The entity repository service for translation context.
    *
    * @return array
    *   An associative array with image data, or an empty array when none found.
@@ -204,9 +208,14 @@ class ParagraphHelper {
   public static function buildImageItem(
     ParagraphInterface $paragraph, 
     FileUrlGeneratorInterface $file_url_generator,
-    $field_name
+    $field_name,
+    ?EntityRepositoryInterface $entity_repository = NULL
   ): array {
     $item = [];
+
+    if ($entity_repository) {
+      $paragraph = $entity_repository->getTranslationFromContext($paragraph);
+    }
 
     if (!($paragraph->hasField($field_name) && !$paragraph->get($field_name)->isEmpty())) {
       return [];

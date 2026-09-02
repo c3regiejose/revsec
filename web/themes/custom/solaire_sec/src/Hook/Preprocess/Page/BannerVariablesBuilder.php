@@ -7,6 +7,7 @@ use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\File\FileUrlGeneratorInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Paragraph\ParagraphHelper;
 use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\EntityRepositoryInterface;
 
 class BannerVariablesBuilder {
 
@@ -14,16 +15,19 @@ class BannerVariablesBuilder {
 	protected FileSystemInterface $fileSystem;
 	protected FileUrlGeneratorInterface $fileUrlGenerator;
 	protected $isFront;
+  protected EntityRepositoryInterface $entityRepository;
 
 	public function __construct(
 		EntityTypeManagerInterface $entity_type_manager,
 		FileSystemInterface $file_system,
 		FileUrlGeneratorInterface $file_url_generator,
+    EntityRepositoryInterface $entity_repository,
 		$is_front
 	) {
 		$this->entityTypeManager = $entity_type_manager;
 		$this->fileSystem = $file_system;
 		$this->fileUrlGenerator = $file_url_generator;
+		$this->entityRepository = $entity_repository;
 		$this->isFront = $is_front;
 	}
 
@@ -60,7 +64,7 @@ class BannerVariablesBuilder {
           'target_id'
         );
 
-        $paragraphs = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $ids);
+        $paragraphs = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $ids, $this->entityRepository);
         foreach ($paragraphs as $paragraph) {
           if ($paragraph->hasField('field_banner_items') &&
             !$paragraph->get('field_banner_items')->isEmpty()
@@ -102,15 +106,15 @@ class BannerVariablesBuilder {
    */
   public function loadParagrapgBannersItem($parIds) {
     $bannerLists = [];
-    $bannerItems = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $parIds);
+    $bannerItems = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $parIds, $this->entityRepository);
 
     foreach ($bannerItems as $banner) {
-      $desktopBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_image');
+      $desktopBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_image', $this->entityRepository);
       if (!empty($desktopBanner)) {
         $bannerLists[$banner->id()]['field_image'] = $desktopBanner;
       }
 
-      $mobileBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_mobile_banner');
+      $mobileBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_mobile_banner', $this->entityRepository);
       if (!empty($mobileBanner)) {
         $bannerLists[$banner->id()]['field_mobile_banner'] = $mobileBanner;
       }

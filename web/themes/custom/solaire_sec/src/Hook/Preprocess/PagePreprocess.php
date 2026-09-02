@@ -13,6 +13,7 @@ use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
 use Drupal\Core\Plugin\Context\ContextHandlerInterface;
 use Drupal\solaire_sec\Hook\Preprocess\Page\BannerVariablesBuilder;
 use Psr\Container\ContainerInterface;
+use Drupal\Core\Entity\EntityRepositoryInterface;
 
 class PagePreprocess implements ContainerInjectionInterface {
 
@@ -50,6 +51,7 @@ class PagePreprocess implements ContainerInjectionInterface {
   protected EntityTypeManagerInterface $entityTypeManager;
   protected FileSystemInterface $fileSystem;
   protected FileUrlGeneratorInterface $fileUrlGenerator;
+  protected EntityRepositoryInterface $entityRepository;
 
   /**
    * ParagraphPreprocess constructor.
@@ -60,7 +62,8 @@ class PagePreprocess implements ContainerInjectionInterface {
     ContextHandlerInterface $context_handler,
     EntityTypeManagerInterface $entity_type_manager,
     FileSystemInterface $file_system,
-    FileUrlGeneratorInterface $file_url_generator
+    FileUrlGeneratorInterface $file_url_generator,
+    EntityRepositoryInterface $entity_repository,
   ) {
     $this->blockManager = $block_manager;
     $this->contextRepository = $context_repository;
@@ -68,6 +71,7 @@ class PagePreprocess implements ContainerInjectionInterface {
     $this->entityTypeManager = $entity_type_manager;
     $this->fileSystem = $file_system;
     $this->fileUrlGenerator = $file_url_generator;
+    $this->entityRepository = $entity_repository;
   }
 
   /**
@@ -97,6 +101,7 @@ class PagePreprocess implements ContainerInjectionInterface {
         $this->entityTypeManager,
         $this->fileSystem,
         $this->fileUrlGenerator,
+        $this->entityRepository,
         $variables['is_front']
       );
       $variables = array_merge($variables, $builder->buildBannerVariables($node));
