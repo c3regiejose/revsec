@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_mobile_thumbnail
     - node.type.dining
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: node.dining.field_mobile_thumbnail
 field_name: field_mobile_thumbnail
 entity_type: node
@@ -14,7 +21,7 @@ bundle: dining
 label: 'Tile Thumbnail'
 description: "This will overlap the page's default banner/s during mobile view<br/>\r\n<strong>Make sure the sequence of images are same as the default banner/s</strong><br/>\r\n<em>Required size:</em><br/>\r\n<strong>Width: 480px, Height: 707px</strong>"
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

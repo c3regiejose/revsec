@@ -12,7 +12,7 @@ bundle: rewards
 label: 'Featured on Frontpage banner'
 description: '<small>Will be this <strong>Page</strong> will be featured on <strong>frontpage banner</strong>?</small>'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

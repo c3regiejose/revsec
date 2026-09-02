@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_mobile_banner
     - paragraphs.paragraphs_type.image_gallery_items
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: paragraph.image_gallery_items.field_mobile_banner
 field_name: field_mobile_banner
 entity_type: paragraph
@@ -14,7 +21,7 @@ bundle: image_gallery_items
 label: Image
 description: "<em>Required size:</em><br/>\r\n<strong>1:1 Ratio with minimum width and height of 700px.</strong>"
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
