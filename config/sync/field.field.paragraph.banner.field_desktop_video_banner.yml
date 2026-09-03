@@ -1,0 +1,29 @@
+uuid: ab5e57d9-d920-4743-8c14-184acf15cea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_desktop_video_banner
+    - media.type.video
+    - paragraphs.paragraphs_type.banner
+id: paragraph.banner.field_desktop_video_banner
+field_name: field_desktop_video_banner
+entity_type: paragraph
+bundle: banner
+label: 'Desktop Video Banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

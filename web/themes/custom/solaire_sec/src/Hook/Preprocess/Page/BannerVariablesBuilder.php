@@ -109,14 +109,44 @@ class BannerVariablesBuilder {
     $bannerItems = ParagraphHelper::loadParagraphsByIds($this->entityTypeManager, $parIds, $this->entityRepository);
 
     foreach ($bannerItems as $banner) {
-      $desktopBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_image', $this->entityRepository);
+      $desktopBanner = ParagraphHelper::buildImageItem(
+        $banner, 
+        $this->fileUrlGenerator, 
+        'field_image', 
+        $this->entityRepository
+      );
       if (!empty($desktopBanner)) {
         $bannerLists[$banner->id()]['field_image'] = $desktopBanner;
       }
 
-      $mobileBanner = ParagraphHelper::buildImageItem($banner, $this->fileUrlGenerator, 'field_mobile_banner', $this->entityRepository);
+      $mobileBanner = ParagraphHelper::buildImageItem(
+        $banner, 
+        $this->fileUrlGenerator, 
+        'field_mobile_banner', 
+        $this->entityRepository
+      );
       if (!empty($mobileBanner)) {
         $bannerLists[$banner->id()]['field_mobile_banner'] = $mobileBanner;
+      }
+
+      $desktopVideoBanner = ParagraphHelper::getVideoFileUrl(
+        $banner,
+        $this->fileUrlGenerator,
+        'field_desktop_video_banner',
+        $this->entityRepository
+      );
+      if (!empty($desktopVideoBanner)) {
+        $bannerLists[$banner->id()]['field_desktop_video_banner'] = $desktopVideoBanner;
+      }
+
+      $mobileVideoBanner = ParagraphHelper::getVideoFileUrl(
+        $banner,
+        $this->fileUrlGenerator,
+        'field_mobile_video_banner',
+        $this->entityRepository
+      );
+      if (!empty($mobileVideoBanner)) {
+        $bannerLists[$banner->id()]['field_mobile_video_banner'] = $mobileVideoBanner;
       }
     }
 

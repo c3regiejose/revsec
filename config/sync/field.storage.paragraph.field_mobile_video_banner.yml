@@ -1,0 +1,20 @@
+uuid: 7b756869-6987-43cf-bb5b-9842f239a7bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_mobile_video_banner
+field_name: field_mobile_video_banner
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

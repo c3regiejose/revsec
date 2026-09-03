@@ -10,6 +10,7 @@ use Drupal\Core\Plugin\Context\ContextHandlerInterface;
 use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\Core\File\FileUrlGeneratorInterface;
+use Drupal\media\Entity\MediaType;
 
 class ParagraphHelper {
   /**
@@ -243,5 +244,57 @@ class ParagraphHelper {
     $item['id'] = $entity->id();
 
     return $item;
+  }
+
+  /**
+   * Returns the absolute URL for a video file referenced by a paragraph.
+   *
+   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   *   The paragraph containing the media reference field.
+   * @param \Drupal\Core\File\FileUrlGeneratorInterface $file_url_generator
+   *   The file URL generator service.
+   * @param string $field_name
+   *   The paragraph field containing the video media reference.
+   * @param \Drupal\Core\Entity\EntityRepositoryInterface|null $entity_repository
+   *   Optional. The entity repository service for translation context.
+   *
+   * @return string|null
+   *   The absolute video file URL, or NULL when no video file is found.
+   */
+  public static function getVideoFileUrl(
+    ParagraphInterface $paragraph,
+    FileUrlGeneratorInterface $file_url_generator,
+    string $field_name,
+    ?EntityRepositoryInterface $entity_repository = NULL
+  ): ?string {
+    if ($entity_repository) {
+      $paragraph = $entity_repository->getTranslationFromContext($paragraph);
+    }
+
+    if (!$paragraph->hasField($field_name) || $paragraph->get($field_name)->isEmpty()) {
+      return NULL;
+    }
+
+    $media = $paragraph->get($field_name)->entity;
+    if (!$media instanceof \Drupal\media\MediaInterface) {
+      return NULL;
+    }
+
+    $media_type = MediaType::load($media->bundle());
+    if (!$media_type) {
+      return NULL;
+    }
+
+    $source_field = $media->getSource()->getSourceFieldDefinition($media_type)->getName();
+    if (!$media->hasField($source_field) || $media->get($source_field)->isEmpty()) {
+      return NULL;
+    }
+
+    $file = $media->get($source_field)->entity;
+    if (!$file instanceof \Drupal\file\FileInterface) {
+      return NULL;
+    }
+
+    return $file_url_generator->generateAbsoluteString($file->getFileUri());
   }
 }

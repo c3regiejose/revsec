@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_cover
     - field.field.paragraph.banner.field_content
+    - field.field.paragraph.banner.field_desktop_video_banner
     - field.field.paragraph.banner.field_image
     - field.field.paragraph.banner.field_mobile_banner
+    - field.field.paragraph.banner.field_mobile_video_banner
     - field.field.paragraph.banner.field_title
     - image.style.hero
     - paragraphs.paragraphs_type.banner
@@ -80,4 +82,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_desktop_video_banner: true
   field_mobile_banner: true
+  field_mobile_video_banner: true

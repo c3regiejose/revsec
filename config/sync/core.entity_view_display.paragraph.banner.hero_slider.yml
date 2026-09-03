@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_slider
     - field.field.paragraph.banner.field_content
+    - field.field.paragraph.banner.field_desktop_video_banner
     - field.field.paragraph.banner.field_image
     - field.field.paragraph.banner.field_mobile_banner
+    - field.field.paragraph.banner.field_mobile_video_banner
     - field.field.paragraph.banner.field_title
     - paragraphs.paragraphs_type.banner
   module:
@@ -122,4 +124,6 @@ content:
     region: ds_content
 hidden:
   field_content: true
+  field_desktop_video_banner: true
+  field_mobile_video_banner: true
   field_title: true

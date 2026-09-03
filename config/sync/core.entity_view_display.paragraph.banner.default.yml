@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.banner.field_content
+    - field.field.paragraph.banner.field_desktop_video_banner
     - field.field.paragraph.banner.field_image
     - field.field.paragraph.banner.field_mobile_banner
+    - field.field.paragraph.banner.field_mobile_video_banner
     - field.field.paragraph.banner.field_title
     - paragraphs.paragraphs_type.banner
   module:
@@ -22,6 +24,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_desktop_video_banner:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_image:
     type: image
@@ -44,6 +55,15 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_mobile_video_banner:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_title:
     type: string
